@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Bao Bì An Hạ Sài Gòn | Trách nhiệm trong từng đơn hàng</title>
+    <link rel="icon" type="image/x-icon" href="images/ahsg_logo.ico" />
+    <meta
+        content="Chuyên cung cấp giải pháp thiết kế và sản xuất hộp giấy, túi giấy, tem nhãn chất lượng cao tại Sài Gòn."
+        name="description" />
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f8fafb",
+                        "tertiary-container": "#3d5e9d",
+                        "outline-variant": "#c2c6d4",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#3f484e",
+                        "background": "#f8fafb",
+                        "inverse-primary": "#a9c7ff",
+                        "on-primary-container": "#c8daff",
+                        "surface-container-high": "#e6e8e9",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#005db6",
+                        "on-primary-fixed-variant": "#00468c",
+                        "on-background": "#191c1d",
+                        "secondary-container": "#d8e1e8",
+                        "primary-fixed-dim": "#a9c7ff",
+                        "on-surface-variant": "#424752",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#001a42",
+                        "error": "#ba1a1a",
+                        "on-surface": "#191c1d",
+                        "tertiary-fixed": "#d8e2ff",
+                        "surface-container-highest": "#e1e3e4",
+                        "primary-container": "#005eb8",
+                        "surface-container": "#eceeef",
+                        "on-tertiary-fixed-variant": "#224583",
+                        "on-primary-fixed": "#001b3d",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#cbd9ff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#d6e3ff",
+                        "primary": "#00478d",
+                        "secondary-fixed-dim": "#bfc8cf",
+                        "tertiary-fixed-dim": "#aec6ff",
+                        "on-secondary-fixed": "#141d22",
+                        "inverse-on-surface": "#eff1f2",
+                        "outline": "#727783",
+                        "on-secondary-container": "#5b646a",
+                        "surface-container-low": "#f2f4f5",
+                        "surface": "#f8fafb",
+                        "inverse-surface": "#2e3132",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#dbe4eb",
+                        "surface-dim": "#d8dadb",
+                        "surface-variant": "#e1e3e4",
+                        "secondary": "#576066",
+                        "tertiary": "#224683"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "unit": "4px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "title-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #bfc8cf;
+            border-radius: 2px;
+        }
+
+        .industrial-mask {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md">
+    <!-- Header: TopNavBar -->
+    <header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant">
+        <nav class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+            <div class="h-10">
+                <img alt="An Hạ Sài Gòn Logo" class="h-full object-contain" src="logo_ahsg_small.png" />
+            </div>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="font-title-md text-body-md text-primary border-b-2 border-primary pb-1 transition-colors duration-200"
+                    href="#about">Giới thiệu</a>
+                <a class="font-title-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200"
+                    href="#strengths">Thế mạnh</a>
+                <a class="font-title-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200"
+                    href="#products">Sản phẩm</a>
+                <a class="font-title-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200"
+                    href="#process">Quy trình</a>
+                <a class="font-title-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200"
+                    href="#faq">FAQ</a>
+            </div>
+            <a href="https://zalo.me/0918176153" target="_blank" rel="noopener noreferrer"
+                class="bg-primary text-on-primary px-6 py-2 font-title-md text-body-md rounded-lg transition-all scale-95 active:opacity-80 inline-block text-center">
+                Liên hệ ngay
+            </a>
+        </nav>
+    </header>
+    <main class="mt-[80px]">
+        <!-- Hero Section -->
+        <section class="relative h-[800px] flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover" data-alt="Professional wide-angle manufacturing facility"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1nQ6D6IiBIlEXcFf5OYHD8CD5Xur-WYn-LxPopKjcTfU3_c1uHZb-tXGq4h8fB6L3MzLi2YEpH7dlZ_Bk7J1IP-PY7pkL5mChD1xnO-Zzz6jxnXWk2xJJFb0otask1Tfk0gKiUWCN3fnZkckLjbl0_CL-Mx4MU5w95j4O6CUS-f_mmSLrWnWSL3xqrRPTECuK8--cORqaAXbFEfUhDcrgv6fVV3fbL6lqXrF-_MusseJ-eU-mmbHVeo7ceHGvVkHsqbmhWhc3XNYy" />
+                <div class="absolute inset-0 bg-primary/40 backdrop-blur-[1px]"></div>
+            </div>
+            <div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full text-on-primary">
+                <div class="max-w-2xl">
+                    <p class="font-label-sm text-label-sm tracking-[0.2em] mb-4 text-primary-fixed uppercase">Packaging
+                        Excellence Since 2018</p>
+                    <h1 class="font-display-lg text-display-lg mb-6 leading-tight">Trách nhiệm trong từng đơn hàng</h1>
+                    <p class="font-body-lg text-body-lg mb-10 text-surface-container-highest">Chúng tôi không chỉ bán
+                        bao bì, chúng tôi mang đến sự an tâm tuyệt đối cho thương hiệu của bạn thông qua quy trình sản
+                        xuất tỉ mỉ.</p>
+                    <div class="flex gap-4">
+                        <a href="#about"
+                            class="bg-primary-container text-on-primary-container px-10 py-4 font-title-md text-body-md font-bold rounded-lg transition-all hover:brightness-110 inline-block text-center">
+                            BẮT ĐẦU NGAY
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Introduction -->
+        <section class="py-24 px-margin-desktop max-w-container-max mx-auto" id="about">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div>
+                    <span class="font-label-sm text-label-sm text-secondary mb-4 block uppercase">VỀ CHÚNG TÔI</span>
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-8">Điểm tựa hậu cần vững chắc cho doanh
+                        nghiệp</h2>
+                    <div class="space-y-6 text-on-surface-variant font-body-md">
+                        <p>Được thành lập năm 2018 với khát vọng trở thành điểm tựa hậu cần vững chắc cho các doanh
+                            nghiệp, Công ty TNHH An Hạ Sài Gòn chuyên cung cấp các giải pháp thiết kế và sản xuất hộp
+                            giấy, túi giấy, tem nhãn giấy và nhựa.</p>
+                        <p>Tầm nhìn của chúng tôi là xây dựng một thương hiệu bao bì bền vững bằng lòng tin của khách
+                            hàng, lấy sự chu đáo trong dịch vụ và trách nhiệm trong sản xuất làm kim chỉ nam cho mọi
+                            bước tiến tương lai.</p>
+                        <div class="border-l-4 border-primary pl-6 py-4 bg-surface-container-low">
+                            <p class="italic text-primary font-medium">"Chúng tôi không chỉ bán bao bì, chúng tôi mang
+                                đến sự an tâm cho thương hiệu của bạn."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img class="w-full aspect-[4/5] object-cover rounded-xl" data-alt="Premium paper packaging products"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV4ouxOOtb96-yFNvGPOp04uu7mC8VC2x-eJJPi-SeGjaAGJ82BfdcDC-WWJnrCVKHWm1pEp6PPNDbuAtzcn2zLNutBaFKJC_NRwtj9aLLp3VoRva4lOd6NONvWSnVvXi1Ik0hIKVUgj4HI4p4JFelK8XnLbALytCSB79lJti8gyteJYIOTEgzJYxbpVGgScH0Hl9R9GM7FhiI85iOizR8zOAOWZaPtDcTomjfpBc5LcsxYUgu9-vqpDGjOUgwd6yQQ_9oCjnM_ngo" />
+                    <div
+                        class="absolute -bottom-8 -left-8 bg-primary p-8 text-on-primary rounded-xl shadow-xl hidden lg:block">
+                        <p class="font-display-lg text-headline-lg">06+</p>
+                        <p class="font-label-sm text-label-sm uppercase">Năm kinh nghiệm</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Core Strengths -->
+        <section class="bg-surface-container-low py-24 px-margin-desktop" id="strengths">
+            <div class="max-w-container-max mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-headline-lg text-headline-lg text-primary">Thế mạnh cốt lõi</h2>
+                    <div class="w-16 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant hover:border-primary transition-all group shadow-sm hover:shadow-md">
+                        <div
+                            class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary-fixed mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                            <span class="material-symbols-outlined">edit_note</span>
+                        </div>
+                        <h3 class="font-title-md text-body-md text-primary mb-2 font-bold uppercase">THIẾT KẾ</h3>
+                        <p class="text-on-surface-variant text-body-md">Sáng tạo &amp; Độc quyền, nắm bắt xu hướng thị
+                            trường.</p>
+                        <div
+                            class="mt-6 font-label-sm text-label-sm text-secondary uppercase tracking-wider opacity-60">
+                            Blueprint Phase</div>
+                    </div>
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant hover:border-primary transition-all group shadow-sm hover:shadow-md">
+                        <div
+                            class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary-fixed mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                            <span class="material-symbols-outlined">schedule</span>
+                        </div>
+                        <h3 class="font-title-md text-body-md text-primary mb-2 font-bold uppercase">TIẾN ĐỘ</h3>
+                        <p class="text-on-surface-variant text-body-md">Đúng hẹn 100%, quy trình vận hành tối ưu hóa
+                            thời gian.</p>
+                        <div
+                            class="mt-6 font-label-sm text-label-sm text-secondary uppercase tracking-wider opacity-60">
+                            Sync Delivery</div>
+                    </div>
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant hover:border-primary transition-all group shadow-sm hover:shadow-md">
+                        <div
+                            class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary-fixed mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                            <span class="material-symbols-outlined">handshake</span>
+                        </div>
+                        <h3 class="font-title-md text-body-md text-primary mb-2 font-bold uppercase">TRÁCH NHIỆM</h3>
+                        <p class="text-on-surface-variant text-body-md">Đồng hành trọn đời, bảo hành mọi lỗi sản xuất.
+                        </p>
+                        <div
+                            class="mt-6 font-label-sm text-label-sm text-secondary uppercase tracking-wider opacity-60">
+                            Lifetime Support</div>
+                    </div>
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant hover:border-primary transition-all group shadow-sm hover:shadow-md">
+                        <div
+                            class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary-fixed mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                            <span class="material-symbols-outlined">payments</span>
+                        </div>
+                        <h3 class="font-title-md text-body-md text-primary mb-2 font-bold uppercase">CHI PHÍ</h3>
+                        <p class="text-on-surface-variant text-body-md">Giá xưởng tối ưu, tiết kiệm ngân sách bao bì.
+                        </p>
+                        <div
+                            class="mt-6 font-label-sm text-label-sm text-secondary uppercase tracking-wider opacity-60">
+                            Factory Direct</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Key Products -->
+        <section class="py-24 overflow-hidden" id="products">
+            <div class="px-margin-desktop max-w-container-max mx-auto mb-12 flex justify-between items-end">
+                <div>
+                    <h2 class="font-headline-lg text-headline-lg text-primary">Sản phẩm tiêu biểu</h2>
+                    <p class="text-on-surface-variant mt-2">Đa dạng chất liệu, thiết kế bắt kịp nhu cầu khách hàng.</p>
+                </div>
+            </div>
+            <div class="px-margin-desktop pb-8">
+                <div class="max-w-container-max mx-auto px-margin-desktop space-y-16">
+                    <!-- Category: Hộp Giấy (Paper Boxes) -->
+                    <div>
+                        <h3 class="font-headline-lg text-title-md text-primary mb-8 border-l-4 border-primary pl-4">Hộp
+                            Giấy &amp; Bao Bì Cứng</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                            <!-- Hộp Giấy Kraft -->
+                            <div id="product-kraft"
+                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                <img alt="Hộp Giấy Kraft" class="w-full h-64 object-cover rounded-t-xl"
+                                    src="images/image14.png" />
+                                <div class="p-6 flex-grow">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h4 class="font-title-md text-title-md text-primary">Hộp Giấy Kraft</h4>
+                                        <span
+                                            class="bg-primary-fixed text-primary-fixed-variant px-3 py-1 font-label-sm text-[10px] rounded uppercase">Eco-friendly</span>
+                                    </div>
+                                    <p class="text-body-md font-body-md text-on-surface-variant mb-6">Carton 3 lớp nắp
+                                        gài, Kraft 2 mặt ôm lõi sóng. Phong cách tối giản, cổ điển. Form đứng, cứng cáp,
+                                        chịu lực tốt cho vận chuyển
+                                        COD.</p>
+                                    <div
+                                        class="border-t border-outline-variant pt-4 flex justify-between items-center mt-auto">
+                                        <span class="font-label-sm text-label-sm text-secondary opacity-60">3-PLY
+                                            KRAFT</span>
+                                        <span
+                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Hộp giấy carton nắp gài hông (Hộp COD) -->
+                            <div
+                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                <img alt="Hộp giấy carton nắp gài hông (Hộp COD)"
+                                    class="w-full h-64 object-cover rounded-t-xl" src="images/image13.png" />
+                                <div class="p-6 flex-grow">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h4 class="font-title-md text-title-md text-primary">Hộp nắp gài hông</h4>
+                                        <span
+                                            class="bg-primary-fixed text-primary-fixed-variant px-3 py-1 font-label-sm text-[10px] rounded uppercase">Eco-friendly</span>
+                                    </div>
+                                    <p class="text-body-md font-body-md text-on-surface-variant mb-6">Carton 3 lớp nắp
+                                        gài, Kraft 2 mặt ôm lõi sóng. Form hộp dẹt, thành hộp dày gấp đôi nhờ nắp gài
+                                        hông, giúp chống cấn móp cực tốt.
+                                    </p>
+                                    <div
+                                        class="border-t border-outline-variant pt-4 flex justify-between items-center mt-auto">
+                                        <span class="font-label-sm text-label-sm text-secondary opacity-60">3-PLY
+                                            KRAFT</span>
+                                        <span
+                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Hộp giấy carton nắp gài cao cấp (Hộp quà tặng/hộp COD thương hiệu) -->
+                            <div
+                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                <img alt="Hộp quà tặng" class="w-full h-64 object-cover rounded-t-xl"
+                                    src="images/image19.png" />
+                                <div class="p-6 flex-grow">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h4 class="font-title-md text-title-md text-primary">Hộp quà tặng</h4>
+                                        <span
+                                            class="bg-primary-fixed text-primary-fixed-variant px-3 py-1 font-label-sm text-[10px] rounded uppercase">Eco-friendly</span>
+                                    </div>
+                                    <p class="text-body-md font-body-md text-on-surface-variant mb-6">Carton 3 lớp nắp
+                                        gài bồi giấy mỹ thuật. Phía trong có lót giấy nến vàng nhạt để bọc bảo vệ sản
+                                        phẩm. Dùng cho sản phẩm thời trang cao cấp hoặc mỹ phẩm xa xỉ.
+                                    </p>
+                                    <div
+                                        class="border-t border-outline-variant pt-4 flex justify-between items-center mt-auto">
+                                        <span class="font-label-sm text-label-sm text-secondary opacity-60">3-PLY
+                                            KRAFT</span>
+                                        <span
+                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bao bì Thực phẩm -->
+                            <div id="product-food"
+                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                <img alt="Bao bì Thực phẩm" class="w-full h-64 object-cover rounded-t-xl"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo7b-OTB0AZzDCI37rQiuupT4in9EbdmL_dTQH0W3ST_WNlHlP4mEgtFYdITTSxaFq7Ra2K_EvyJMk36FTD4Twjy178JPL9Oei-xmJ_Rg1gAVXwa_uDDL2n0CSTpx9HZDiAI7Sn0Cb3vqjVdXD5ippO4KvHNDC9MlBPU49mPlObGBjk8sY7CYaw6xQ1c1Bz3FQmtOY6ezng1ptRIXKjk_uMoBQNgv6uAlB8YyGQxqDPI_V1H1jDdtTiZ1FLYzvjz-ppAXjXuYGTDby" />
+                                <div class="p-6 flex-grow">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h4 class="font-title-md text-title-md text-primary">Bao Bì Thực Phẩm</h4>
+                                        <span
+                                            class="bg-primary-fixed text-primary-fixed-variant px-3 py-1 font-label-sm text-[10px] rounded uppercase">Food
+                                            Grade</span>
+                                    </div>
+                                    <p class="text-body-md font-body-md text-on-surface-variant mb-6">Giấy Ivory/Duplex
+                                        300-350gsm, phủ màng PE chống thấm dầu mỡ và chống thấm nước. Chuyên dụng cho
+                                        thực phẩm đông lạnh.
+                                    </p>
+                                    <div
+                                        class="border-t border-outline-variant pt-4 flex justify-between items-center mt-auto">
+                                        <span class="font-label-sm text-label-sm text-secondary opacity-60">PE
+                                            COATED</span>
+                                        <span
+                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bao bì Điện tử -->
+                            <div
+                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                <img alt="Bao bì Điện tử" class="w-full h-64 object-cover rounded-t-xl"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMv1reKdYt9_y-XGvyChM1Z-mOr8Vm6buaBFAdgbR76844BMMFPtiEWhRLfUjRhnazbhjO5KJn20JqXQWGRP2NYY_hpWABf1CrEukK-hnN67UFaPy7VwKRaJm_XENTCf11W3loAn_UUahFnPP5tcDTZAzWyrlf2JdcFXVf8joGbuK3wWoYjNWnC3kxrI3H23eX5f_iyBK7IO5-XZ4kKg6FSX6YSE7QHEsXKNH8gwvBDgBr_4QK7ic15LiGY84mZYniY12K-5LCrkx1" />
+                                <div class="p-6 flex-grow">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h4 class="font-title-md text-title-md text-primary">Bao Bì Điện Tử</h4>
+                                        <span
+                                            class="bg-primary-fixed text-primary-fixed-variant px-3 py-1 font-label-sm text-[10px] rounded uppercase">Industrial</span>
+                                    </div>
+                                    <p class="text-body-md font-body-md text-on-surface-variant mb-6">Carton bồi sóng E,
+                                        cán màng bóng chống ẩm. Kết cấu cứng cáp bảo vệ thiết bị khỏi va đập.</p>
+                                    <div
+                                        class="border-t border-outline-variant pt-4 flex justify-between items-center mt-auto">
+                                        <span class="font-label-sm text-label-sm text-secondary opacity-60">E-FLUTE
+                                            BOARD</span>
+                                        <span
+                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bao bì Nông sản -->
+                            <div
+                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                <img alt="Bao bì Nông sản" class="w-full h-64 object-cover rounded-t-xl"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMHsdV29lJEyk1NwvCOIfvDSSH8zKRvtOrCbrSdJPIrXZaRdR2ci3_l0v9YIyEZLOA5_vLsn3M_cQSk0KflOiWzBgsZ-iq9N5b2cd50iUVEql4Rt42igj70vrmeuzgSm-qGRldQQPK6GuIIK7fOpL6FntZcWjaNZPX-L5mnpFruPxFaAyRfBOwURr5mJsQPPh41nQhjWthudRHjA-2XQXYn1YgvuqBKAFJCFdurSZ0hr7fz-ZntrfOiHYhAbu9D9hCSTY-7ZoFnye-" />
+                                <div class="p-6 flex-grow">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h4 class="font-title-md text-title-md text-primary">Bao Bì Nông Sản</h4>
+                                        <span
+                                            class="bg-primary-fixed text-primary-fixed-variant px-3 py-1 font-label-sm text-[10px] rounded uppercase">Export</span>
+                                    </div>
+                                    <p class="text-body-md font-body-md text-on-surface-variant mb-6">Giấy Ivory bồi
+                                        sóng E, cán màng chống thấm. Thiết kế bế cửa sổ kiếng PVC trong suốt cao cấp.
+                                    </p>
+                                    <div
+                                        class="border-t border-outline-variant pt-4 flex justify-between items-center mt-auto">
+                                        <span class="font-label-sm text-label-sm text-secondary opacity-60">WINDOW
+                                            BOX</span>
+                                        <span
+                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Category: Túi Giấy & Quà Tặng (Bags) -->
+                    <div>
+                        <h3 class="font-headline-lg text-title-md text-primary mb-8 border-l-4 border-primary pl-4">Túi
+                            Giấy &amp; Quà Tặng</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                            <!-- Túi Giấy Quà Tặng -->
+                            <div id="product-bags"
+                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                <img alt="Túi Giấy Quà Tặng" class="w-full h-64 object-cover rounded-t-xl"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBvlQsEuUU2qxRmZdXbyKwOJTztuLTP-3x0MQ-q9Cbj2PZ8fwcBvm9B96x9xwdal94sCuRwprwdGPKDw1gAQCpDJMQtMoDubYAuzbDhTKlEoBzIM1mRrov6k8gTHYebSHe3oWotfDoXd-yLSQF9LiWKSb9vVYNQCvl1cAECe_k378pcs3jsB7l1xpyHnQt82sA9X59ujXXgHBXrf75KAFflwPbRGU6oFy83iqFH2Od8TQgZBmxFZDGo7Tu-242mhcPzFo0dXlcp_dM" />
+                                <div class="p-6 flex-grow">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h4 class="font-title-md text-title-md text-primary">Túi Giấy Quà Tặng</h4>
+                                        <span
+                                            class="bg-primary-fixed text-primary-fixed-variant px-3 py-1 font-label-sm text-[10px] rounded uppercase">Premium</span>
+                                    </div>
+                                    <p class="text-body-md font-body-md text-on-surface-variant mb-6">Giấy Ivory/Couche
+                                        250-300gsm, cán màng mờ sang trọng. Quai dây dù dệt tròn, in offset sắc nét.</p>
+                                    <div
+                                        class="border-t border-outline-variant pt-4 flex justify-between items-center mt-auto">
+                                        <span class="font-label-sm text-label-sm text-secondary opacity-60">IVORY
+                                            MATT</span>
+                                        <span
+                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Túi mua sắm -->
+                            <div
+                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                <img alt="Túi mua sắm" class="w-full h-64 object-cover rounded-t-xl"
+                                    src="images/image20.png" />
+                                <div class="p-6 flex-grow">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h4 class="font-title-md text-title-md text-primary">Túi mua sắm</h4>
+                                        <span
+                                            class="bg-primary-fixed text-primary-fixed-variant px-3 py-1 font-label-sm text-[10px] rounded uppercase">Premium</span>
+                                    </div>
+                                    <p class="text-body-md font-body-md text-on-surface-variant mb-6">Giấy Kraft nâu
+                                        250-300gsm, bề mặt có xơ giấy nhẹ, tạo cảm giác mộc mạc. Quai dây xỏ thắt nút,
+                                        đóng nút kim loại để chống rách.</p>
+                                    <div
+                                        class="border-t border-outline-variant pt-4 flex justify-between items-center mt-auto">
+                                        <span class="font-label-sm text-label-sm text-secondary opacity-60">KRAFT BROWN
+                                        </span>
+                                        <span
+                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Túi giấy quà tặng cao cấp -->
+                            <div
+                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                <img alt="Túi giấy quà tặng cao cấp" class="w-full h-64 object-cover rounded-t-xl"
+                                    src="images/image12.png" />
+                                <div class="p-6 flex-grow">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h4 class="font-title-md text-title-md text-primary">Túi giấy quà tặng cao cấp
+                                        </h4>
+                                        <span
+                                            class="bg-primary-fixed text-primary-fixed-variant px-3 py-1 font-label-sm text-[10px] rounded uppercase">Premium</span>
+                                    </div>
+                                    <p class="text-body-md font-body-md text-on-surface-variant mb-6">Giấy Ivory hoặc
+                                        Couche
+                                        250-300gsm, cán màng mờ để chống thấm, chống trầy và tạo nét sang trọng</p>
+                                    <div
+                                        class="border-t border-outline-variant pt-4 flex justify-between items-center mt-auto">
+                                        <span class="font-label-sm text-label-sm text-secondary opacity-60">IVORY
+                                        </span>
+                                        <span
+                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Túi giấy đựng bánh mì -->
+                            <div
+                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                <img alt="Túi giấy đựng bánh mì" class="w-full h-64 object-cover rounded-t-xl"
+                                    src="images/image11.png" />
+                                <div class="p-6 flex-grow">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h4 class="font-title-md text-title-md text-primary">Túi giấy đựng bánh mì
+                                        </h4>
+                                        <span
+                                            class="bg-primary-fixed text-primary-fixed-variant px-3 py-1 font-label-sm text-[10px] rounded uppercase">Food
+                                            grade</span>
+                                    </div>
+                                    <p class="text-body-md font-body-md text-on-surface-variant mb-6">Giấy Kraft nâu /
+                                        trắng định lượng mỏng nhẹ có khả năng thấm hút dầu mỡ nhẹ và chịu
+                                        nhiệt tốt để đựng đồ ăn nóng</p>
+                                    <div
+                                        class="border-t border-outline-variant pt-4 flex justify-between items-center mt-auto">
+                                        <span class="font-label-sm text-label-sm text-secondary opacity-60">IVORY
+                                        </span>
+                                        <span
+                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bao bì Mỹ phẩm -->
+                            <div
+                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                <img alt="Bao bì Mỹ phẩm" class="w-full h-64 object-cover rounded-t-xl"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3jxPnMQHos3lZhWEITNcnaVSvfIwQKMmasGbNPgqfJQ9QKiCflLbBdpwfQyps63rU8qRIW0U9JdthdL7b32n5QcLqEHU8IBQ4vsfVLppdrsvYMcT6eMggh3XTus7KaCHleFPHg-Jda5R72x4DEVdDkdAPJhbhf9zclgu_V2TN5hBG23agcHmlSuZOiDP2HXrQ38vf62Z8rP85dSCDjEH_DaV5xu1aVFfbfO3q9gQmU6LTCZApdQrslFxIskOApb8LUMh6gpAj2dSu" />
+                                <div class="p-6 flex-grow">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h4 class="font-title-md text-title-md text-primary">Bao Bì Mỹ Phẩm</h4>
+                                        <span
+                                            class="bg-primary-fixed text-primary-fixed-variant px-3 py-1 font-label-sm text-[10px] rounded uppercase">Luxury</span>
+                                    </div>
+                                    <p class="text-body-md font-body-md text-on-surface-variant mb-6">Giấy Ivory
+                                        300-350gsm cao cấp, cán màng mờ mịn màng. In gradient mượt mà, sắc nét từng chi
+                                        tiết.</p>
+                                    <div
+                                        class="border-t border-outline-variant pt-4 flex justify-between items-center mt-auto">
+                                        <span class="font-label-sm text-label-sm text-secondary opacity-60">IVORY
+                                            350GSM</span>
+                                        <span
+                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bao bì Y tế -->
+                            <div
+                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                <img alt="Bao bì Y tế" class="w-full h-64 object-cover rounded-t-xl"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhSDHCPpDxry6pAIeMyFp_S2aSda66og4HmujkATWBFMrX_Nr2-0PlchqBarFOcPxZpNZb9jtcg7VqZj-0OloWtW9l5Qqv8rsr4XFefpADeXaGuKXC8rs1HLlM8XoakwQCSbs43m8owh721fmYh1BCZyrom-tF9hWk5p8jp1McwE2S6pJAklGK9mfFHTTxaK5Yg-q5qPEAVwCGJyc2zISapDpceoSh91osRXeV1db-3JBhcJy4zb-MuES1WQiH_cz7op66CQ4r4hJw" />
+                                <div class="p-6 flex-grow">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h4 class="font-title-md text-title-md text-primary">Bao Bì Y Tế</h4>
+                                        <span
+                                            class="bg-primary-fixed text-primary-fixed-variant px-3 py-1 font-label-sm text-[10px] rounded uppercase">Medical</span>
+                                    </div>
+                                    <p class="text-body-md font-body-md text-on-surface-variant mb-6">Giấy Duplex/Ivory
+                                        250-300gsm, bế hờ răng cưa tiện lợi. Cán màng mỏng chống bụi và ẩm nhẹ.</p>
+                                    <div
+                                        class="border-t border-outline-variant pt-4 flex justify-between items-center mt-auto">
+                                        <span
+                                            class="font-label-sm text-label-sm text-secondary opacity-60">DUPLEX/IVORY</span>
+                                        <span
+                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Category: Tem Nhãn (Labels) -->
+                    <div>
+                        <h3 class="font-headline-lg text-title-md text-primary mb-8 border-l-4 border-primary pl-4">Tem
+                            Nhãn &amp; Decal</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                            <!-- Tem Nhãn Decal -->
+                            <div id="product-labels"
+                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                <img alt="Tem Nhãn Decal" class="w-full h-64 object-cover rounded-t-xl"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlU3Q092oIFJjPG6C_EBm54UfmmWly9Eb0V6dK10KkGY4RbkbBdJ7LMtq-9UcA1DiDzlRfq9Bt5FmvZJESJvXcplmS9W2669a_Ui0x1YqQG7x0Zwlliu2-CQshLW3z6ATNmoRCUnsIMksMm5hdVerUBuJG__RspjkaVzKo0hb6Q5mq4QS4cxigP6AcMYx6yjZJ1vT2rd89rPHeZ6KwyIDhXZKxkTOLfmJF0-kJrTNmQvEcAGjFqzfODVN7GsnGpvVnmilzNicUK_WH" />
+                                <div class="p-6 flex-grow">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h4 class="font-title-md text-title-md text-primary">Tem Nhãn Decal</h4>
+                                        <span
+                                            class="bg-primary-fixed text-primary-fixed-variant px-3 py-1 font-label-sm text-[10px] rounded uppercase">Diverse</span>
+                                    </div>
+                                    <p class="text-body-md font-body-md text-on-surface-variant mb-6">Decal nhựa PVC/PP
+                                        đục, cán màng bóng bảo vệ. Chống thấm nước, bám dính tốt trong môi trường lạnh.
+                                    </p>
+                                    <div
+                                        class="border-t border-outline-variant pt-4 flex justify-between items-center mt-auto">
+                                        <span class="font-label-sm text-label-sm text-secondary opacity-60">PVC
+                                            WATERPROOF</span>
+                                        <span
+                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Thẻ treo nông sản -->
+                            <div
+                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                <img alt="Thẻ treo nông sản" class="w-full h-64 object-cover rounded-t-xl"
+                                    src="images/image16.png" />
+                                <div class="p-6 flex-grow">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h4 class="font-title-md text-title-md text-primary">Thẻ treo nông sản
+                                        </h4>
+                                        <span
+                                            class="bg-primary-fixed text-primary-fixed-variant px-3 py-1 font-label-sm text-[10px] rounded uppercase">Agri</span>
+                                    </div>
+                                    <p class="text-body-md font-body-md text-on-surface-variant mb-6">Thường dùng cho
+                                        khoai lang, hành tây, tỏi, hoặc trái cây đóng túi lưới. Định hình bo tròn góc và
+                                        tạo đuôi gài.</p>
+                                    <div
+                                        class="border-t border-outline-variant pt-4 flex justify-between items-center mt-auto">
+                                        <span class="font-label-sm text-label-sm text-secondary opacity-60">AGRICULTURE
+                                            TAGS</span>
+                                        <span
+                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tem dán thức ăn gia súc -->
+                            <div
+                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                <img alt="Tem dán thức ăn gia súc" class="w-full h-64 object-cover rounded-t-xl"
+                                    src="images/image15.png" />
+                                <div class="p-6 flex-grow">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h4 class="font-title-md text-title-md text-primary">Tem dán thức ăn gia súc
+                                        </h4>
+                                        <span
+                                            class="bg-primary-fixed text-primary-fixed-variant px-3 py-1 font-label-sm text-[10px] rounded uppercase">Food</span>
+                                    </div>
+                                    <p class="text-body-md font-body-md text-on-surface-variant mb-6">Decal nhựa đục,
+                                        bề mặt dai, xé không rách, chống thấm nước, cán màng bóng hoặc màng mờ</p>
+                                    <div
+                                        class="border-t border-outline-variant pt-4 flex justify-between items-center mt-auto">
+                                        <span class="font-label-sm text-label-sm text-secondary opacity-60">PVC
+                                            WATERPROOF</span>
+                                        <span
+                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Production Process -->
+        <section class="py-24 bg-primary text-on-primary" id="process">
+            <div class="px-margin-desktop max-w-container-max mx-auto">
+                <div class="mb-16">
+                    <span
+                        class="font-label-sm text-label-sm text-primary-fixed opacity-70 uppercase tracking-widest">STANDARD
+                        OPERATING PROCEDURE</span>
+                    <h2 class="font-headline-lg text-headline-lg mt-2">Quy trình sản xuất 7 bước</h2>
+                    <div class="w-16 h-1 bg-primary-fixed mt-4 rounded-full"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-7 gap-6">
+                    <!-- Steps with numeric design from DS -->
+                    <div class="relative pt-8 group">
+                        <div
+                            class="font-display-lg text-4xl text-primary-fixed opacity-30 mb-4 group-hover:opacity-100 transition-opacity">
+                            01</div>
+                        <h4 class="font-title-md text-body-md font-bold mb-2">Tiếp nhận</h4>
+                        <p class="font-body-md text-label-sm text-on-primary/70 leading-relaxed">Tư vấn giải pháp và báo
+                            giá chi tiết.</p>
+                    </div>
+                    <div class="relative pt-8 group">
+                        <div
+                            class="font-display-lg text-4xl text-primary-fixed opacity-30 mb-4 group-hover:opacity-100 transition-opacity">
+                            02</div>
+                        <h4 class="font-title-md text-body-md font-bold mb-2">Thiết kế</h4>
+                        <p class="font-body-md text-label-sm text-on-primary/70 leading-relaxed">Lên layout 2D/3D và
+                            dựng cấu trúc hộp.</p>
+                    </div>
+                    <div class="relative pt-8 group">
+                        <div
+                            class="font-display-lg text-4xl text-primary-fixed opacity-30 mb-4 group-hover:opacity-100 transition-opacity">
+                            03</div>
+                        <h4 class="font-title-md text-body-md font-bold mb-2">Mẫu thử</h4>
+                        <p class="font-body-md text-label-sm text-on-primary/70 leading-relaxed">Làm 1-2 mẫu thực tế để
+                            khách hàng test.</p>
+                    </div>
+                    <div class="relative pt-8 group">
+                        <div
+                            class="font-display-lg text-4xl text-primary-fixed opacity-30 mb-4 group-hover:opacity-100 transition-opacity">
+                            04</div>
+                        <h4 class="font-title-md text-body-md font-bold mb-2">Chế bản</h4>
+                        <p class="font-body-md text-label-sm text-on-primary/70 leading-relaxed">Xuất phim/kẽm in và làm
+                            khuôn bế.</p>
+                    </div>
+                    <div class="relative pt-8 group">
+                        <div
+                            class="font-display-lg text-4xl text-primary-fixed opacity-30 mb-4 group-hover:opacity-100 transition-opacity">
+                            05</div>
+                        <h4 class="font-title-md text-body-md font-bold mb-2">In ấn</h4>
+                        <p class="font-body-md text-label-sm text-on-primary/70 leading-relaxed">In Offset/Flexo hàng
+                            loạt đồng nhất màu.</p>
+                    </div>
+                    <div class="relative pt-8 group">
+                        <div
+                            class="font-display-lg text-4xl text-primary-fixed opacity-30 mb-4 group-hover:opacity-100 transition-opacity">
+                            06</div>
+                        <h4 class="font-title-md text-body-md font-bold mb-2">Gia công</h4>
+                        <p class="font-body-md text-label-sm text-on-primary/70 leading-relaxed">Cán màng, bế hộp và dán
+                            thành phẩm.</p>
+                    </div>
+                    <div class="relative pt-8 group">
+                        <div
+                            class="font-display-lg text-4xl text-primary-fixed opacity-30 mb-4 group-hover:opacity-100 transition-opacity">
+                            07</div>
+                        <h4 class="font-title-md text-body-md font-bold mb-2">QC &amp; Giao</h4>
+                        <p class="font-body-md text-label-sm text-on-primary/70 leading-relaxed">Kiểm tra chất lượng và
+                            bàn giao kho.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ Section -->
+        <section class="py-24 px-margin-desktop max-w-container-max mx-auto" id="faq">
+            <div class="grid md:grid-cols-3 gap-20">
+                <div class="md:col-span-1">
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-6">Các câu hỏi thường gặp</h2>
+                    <p class="text-on-surface-variant mb-8">Nếu bạn không tìm thấy câu trả lời cần thiết, vui lòng liên
+                        hệ trực tiếp với bộ phận kinh doanh của chúng tôi.</p>
+                    <div class="bg-primary-container/10 p-6 border-l-4 border-primary rounded-r-lg">
+                        <p class="font-label-sm text-label-sm text-primary mb-2 uppercase">HOTLINE HỖ TRỢ</p>
+                        <p class="font-headline-lg text-primary">0918 176 153</p>
+                    </div>
+                </div>
+                <div class="md:col-span-2 space-y-4">
+                    <details
+                        class="group bg-surface-container-lowest border border-outline-variant rounded-xl p-6 open:border-primary transition-all">
+                        <summary
+                            class="flex justify-between items-center cursor-pointer list-none font-title-md text-body-lg text-primary">
+                            Số lượng đặt hàng tối thiểu (MOQ) là bao nhiêu?
+                            <span
+                                class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <div class="mt-4 text-on-surface-variant text-body-md pt-4 border-t border-outline-variant/30">
+                            Tùy thuộc vào loại sản phẩm và kích thước. Thông thường với hộp carton, MOQ bắt đầu từ 500
+                            chiếc để tối ưu chi phí in ấn và khuôn bế.
+                        </div>
+                    </details>
+                    <details
+                        class="group bg-surface-container-lowest border border-outline-variant rounded-xl p-6 open:border-primary transition-all">
+                        <summary
+                            class="flex justify-between items-center cursor-pointer list-none font-title-md text-body-lg text-primary">
+                            Có nhận làm hộp mẫu (Sample) trước khi sản xuất không?
+                            <span
+                                class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <div class="mt-4 text-on-surface-variant text-body-md pt-4 border-t border-outline-variant/30">
+                            Có, chúng tôi nhận làm mẫu để test kích thước và màu sắc. Chi phí làm mẫu sẽ được hoàn lại
+                            hoặc khấu trừ vào đơn hàng chính thức khi ký hợp đồng.
+                        </div>
+                    </details>
+                    <details
+                        class="group bg-surface-container-lowest border border-outline-variant rounded-xl p-6 open:border-primary transition-all">
+                        <summary
+                            class="flex justify-between items-center cursor-pointer list-none font-title-md text-body-lg text-primary">
+                            Chưa có thiết kế, công ty có hỗ trợ không?
+                            <span
+                                class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <div class="mt-4 text-on-surface-variant text-body-md pt-4 border-t border-outline-variant/30">
+                            Chúng tôi hỗ trợ thiết kế miễn phí hoặc chỉnh sửa lại layout theo yêu cầu của khách hàng cho
+                            đến khi ưng ý trước khi bấm máy in.
+                        </div>
+                    </details>
+                    <details
+                        class="group bg-surface-container-lowest border border-outline-variant rounded-xl p-6 open:border-primary transition-all">
+                        <summary
+                            class="flex justify-between items-center cursor-pointer list-none font-title-md text-body-lg text-primary">
+                            Thời gian sản xuất một đơn hàng là bao lâu?
+                            <span
+                                class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <div class="mt-4 text-on-surface-variant text-body-md pt-4 border-t border-outline-variant/30">
+                            Thông thường từ 7 - 10 ngày làm việc kể từ khi chốt thiết kế và đặt cọc. Tùy thuộc vào số
+                            lượng và độ phức tạp của thành phẩm.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-inverse-surface text-on-surface-variant border-t border-outline">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto">
+            <div class="col-span-1 md:col-span-1">
+                <div class="h-12 mb-8">
+                    <img alt="An Hạ Sài Gòn Logo" class="h-full object-contain brightness-0 invert"
+                        src="logo_ahsg_small.png" />
+                </div>
+                <p class="font-body-md text-outline-variant mb-10">Trách nhiệm trong từng đơn hàng. Điểm tựa hậu cần
+                    vững
+                    chắc cho mọi thương hiệu.</p>
+            </div>
+            <div>
+                <h4 class="font-label-sm text-label-sm text-surface-bright mb-6 uppercase tracking-widest">Sản phẩm</h4>
+                <ul class="space-y-4 font-body-md text-outline-variant">
+                    <li><a class="hover:text-primary transition-colors" href="#product-kraft">Hộp Giấy Kraft</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#product-bags">Túi Giấy Quà Tặng</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#product-labels">Tem Nhãn Decal</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#product-food">Bao Bì Thực Phẩm</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-sm text-label-sm text-surface-bright mb-6 uppercase tracking-widest">Liên kết</h4>
+                <ul class="space-y-4 font-body-md text-outline-variant">
+                    <li><a class="hover:text-primary transition-colors" href="#about">Về chúng tôi</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#process">Quy trình sản xuất</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="https://anhalongan.com"
+                            target="_blank">Công ty bao bì
+                            An Hạ
+                            Long An</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="https://ahtn.vn" target="_blank">Công ty
+                            bao bì An Hạ Tây
+                            Ninh</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-sm text-label-sm text-surface-bright mb-6 uppercase tracking-widest">Liên hệ</h4>
+                <div class="space-y-4 font-body-md text-outline-variant">
+                    <p class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-[20px] text-primary">location_on</span>
+                        549 Tân Kỳ Tân Quý, P. Tân Sơn Nhì, TPHCM
+                    </p>
+                    <p class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-[20px] text-primary">phone_in_talk</span>
+                        0918 176 153 (Zalo)
+                    </p>
+                    <p class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-[20px] text-primary">mail</span>
+                        anhasaigon@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-outline/20 py-8 text-center bg-black/20">
+            <p class="font-label-sm text-label-sm text-outline-variant/60 uppercase">
+                © 2026 Bao bì An Hạ Sài Gòn. Professional Industrial Packaging.
+            </p>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    const targetEl = document.querySelector(targetId);
+                    if (targetEl) {
+                        targetEl.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('header nav a[href^="#"]');
+
+        function updateActiveNavLink() {
+            let currentSectionId = '';
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                // 120px offset to account for header height
+                if (rect.top <= 120 && rect.bottom >= 120) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            // If we are at the bottom of the page, force the last section to be active
+            if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 10) {
+                currentSectionId = sections[sections.length - 1]?.getAttribute('id') || '';
+            }
+
+            navLinks.forEach(link => {
+                if (currentSectionId && link.getAttribute('href') === `#${currentSectionId}`) {
+                    link.classList.add('text-primary', 'border-b-2', 'border-primary', 'pb-1');
+                    link.classList.remove('text-on-surface-variant');
+                } else {
+                    link.classList.remove('text-primary', 'border-b-2', 'border-primary', 'pb-1');
+                    link.classList.add('text-on-surface-variant');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg', 'bg-white/95', 'backdrop-blur-sm');
+            } else {
+                header.classList.remove('shadow-lg', 'bg-white/95', 'backdrop-blur-sm');
+            }
+            updateActiveNavLink();
+        });
+
+        // Initialize active state on load
+        updateActiveNavLink();
+    </script>
+</body>
+
+</html>
