@@ -65,7 +65,7 @@
                         "on-secondary-container": "#5b646a",
                         "surface-container-low": "#f2f4f5",
                         "surface": "#f8fafb",
-                        "inverse-surface": "#2e3132",
+                        "inverse-surface": "#00478D",
                         "error-container": "#ffdad6",
                         "secondary-fixed": "#dbe4eb",
                         "surface-dim": "#d8dadb",
@@ -139,22 +139,27 @@
             pointer-events: none;
             transition: opacity 0.3s ease;
         }
+
         #product-modal.open {
             opacity: 1;
             pointer-events: all;
         }
+
         #product-modal-panel {
             transform: translateY(32px) scale(0.97);
             transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
             opacity: 0;
         }
+
         #product-modal.open #product-modal-panel {
             transform: translateY(0) scale(1);
             opacity: 1;
         }
+
         .product-card {
             cursor: pointer;
         }
+
         .product-card:focus-visible {
             outline: 2px solid #00478d;
             outline-offset: 2px;
@@ -356,8 +361,7 @@
                                 </div>
                             </div>
                             <!-- Hộp giấy carton nắp gài hông (Hộp COD) -->
-                            <div
-                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                            <div class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Hộp nắp gài hông"
                                 data-product="hop-nap-gai-hong">
                                 <img alt="Hộp giấy carton nắp gài hông (Hộp COD)"
@@ -382,8 +386,7 @@
                                 </div>
                             </div>
                             <!-- Hộp giấy carton nắp gài cao cấp (Hộp quà tặng/hộp COD thương hiệu) -->
-                            <div
-                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                            <div class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Hộp quà tặng"
                                 data-product="hop-qua-tang">
                                 <img alt="Hộp quà tặng" class="w-full h-64 object-cover rounded-t-xl"
@@ -435,8 +438,7 @@
                                 </div>
                             </div>
                             <!-- Bao bì Điện tử -->
-                            <div
-                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                            <div class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Bao Bì Điện Tử"
                                 data-product="bao-bi-dien-tu">
                                 <img alt="Bao bì Điện tử" class="w-full h-64 object-cover rounded-t-xl"
@@ -459,8 +461,7 @@
                                 </div>
                             </div>
                             <!-- Bao bì Nông sản -->
-                            <div
-                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                            <div class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Bao Bì Nông Sản"
                                 data-product="bao-bi-nong-san">
                                 <img alt="Bao bì Nông sản" class="w-full h-64 object-cover rounded-t-xl"
@@ -515,8 +516,7 @@
                                 </div>
                             </div>
                             <!-- Túi mua sắm -->
-                            <div
-                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                            <div class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Túi mua sắm"
                                 data-product="tui-mua-sam">
                                 <img alt="Túi mua sắm" class="w-full h-64 object-cover rounded-t-xl"
@@ -540,8 +540,7 @@
                                 </div>
                             </div>
                             <!-- Túi giấy quà tặng cao cấp -->
-                            <div
-                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                            <div class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Túi giấy quà tặng cao cấp"
                                 data-product="tui-giay-cao-cap">
                                 <img alt="Túi giấy quà tặng cao cấp" class="w-full h-64 object-cover rounded-t-xl"
@@ -566,8 +565,7 @@
                                 </div>
                             </div>
                             <!-- Túi giấy đựng bánh mì -->
-                            <div
-                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                            <div class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Túi giấy đựng bánh mì"
                                 data-product="tui-giay-banh-mi">
                                 <img alt="Túi giấy đựng bánh mì" class="w-full h-64 object-cover rounded-t-xl"
@@ -593,8 +591,7 @@
                                 </div>
                             </div>
                             <!-- Bao bì Mỹ phẩm -->
-                            <div
-                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                            <div class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Bao Bì Mỹ Phẩm"
                                 data-product="bao-bi-my-pham">
                                 <img alt="Bao bì Mỹ phẩm" class="w-full h-64 object-cover rounded-t-xl"
@@ -618,8 +615,7 @@
                                 </div>
                             </div>
                             <!-- Bao bì Y tế -->
-                            <div
-                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                            <div class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Bao Bì Y Tế"
                                 data-product="bao-bi-y-te">
                                 <img alt="Bao bì Y tế" class="w-full h-64 object-cover rounded-t-xl"
@@ -674,8 +670,7 @@
                                 </div>
                             </div>
                             <!-- Thẻ treo nông sản -->
-                            <div
-                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                            <div class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Thẻ treo nông sản"
                                 data-product="the-treo-nong-san">
                                 <img alt="Thẻ treo nông sản" class="w-full h-64 object-cover rounded-t-xl"
@@ -700,8 +695,7 @@
                                 </div>
                             </div>
                             <!-- Tem dán thức ăn gia súc -->
-                            <div
-                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                            <div class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Tem dán thức ăn gia súc"
                                 data-product="tem-thuc-an-gia-suc">
                                 <img alt="Tem dán thức ăn gia súc" class="w-full h-64 object-cover rounded-t-xl"
@@ -876,9 +870,13 @@
         <div
             class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-12 md:py-16 max-w-container-max mx-auto">
             <div class="col-span-1 md:col-span-1">
-                <div class="h-12 mb-8">
-                    <img alt="An Hạ Sài Gòn Logo" class="h-full object-contain brightness-0 invert"
-                        src="logo_ahsg_small.png" />
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="h-12 flex-shrink-0">
+                        <img alt="An Hạ Sài Gòn Logo" class="h-full object-contain brightness-0 invert"
+                            src="logo_ahsg_small.png" />
+                    </div>
+                    <p class="font-label-sm text-label-sm text-surface-bright uppercase tracking-wide leading-tight">
+                        CÔNG TY TNHH<br>AN HẠ SÀI GÒN</p>
                 </div>
                 <p class="font-body-md text-outline-variant mb-10">Trách nhiệm trong từng đơn hàng. Điểm tựa hậu cần
                     vững
@@ -912,7 +910,7 @@
                 <div class="space-y-4 font-body-md text-outline-variant">
                     <p class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-[20px] text-primary">location_on</span>
-                        549/30 Tân Kỳ Tân Quý, P. Tân Sơn Nhì, TPHCM
+                        364/30B Thoại Ngọc Hầu, Phường Phú Thạnh, TPHCM
                     </p>
                     <p class="flex items-center gap-3">
                         <span class="material-symbols-outlined text-[20px] text-primary">phone_in_talk</span>
@@ -932,9 +930,8 @@
         </div>
     </footer>
     <!-- Product Detail Modal -->
-    <div id="product-modal"
-        class="fixed inset-0 z-[200] flex items-center justify-center p-4 md:p-8"
-        role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div id="product-modal" class="fixed inset-0 z-[200] flex items-center justify-center p-4 md:p-8" role="dialog"
+        aria-modal="true" aria-labelledby="modal-title">
         <!-- Backdrop -->
         <div id="product-modal-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
         <!-- Panel -->
@@ -961,7 +958,8 @@
                             class="font-label-sm text-label-sm text-secondary opacity-60 uppercase tracking-wider"></span>
                     </div>
                     <h3 id="modal-title" class="font-headline-lg text-headline-lg-mobile text-primary mb-4"></h3>
-                    <p id="modal-description" class="text-body-md font-body-md text-on-surface-variant leading-relaxed mb-6"></p>
+                    <p id="modal-description"
+                        class="text-body-md font-body-md text-on-surface-variant leading-relaxed mb-6"></p>
                     <!-- Detail features -->
                     <ul id="modal-features" class="space-y-3 mb-8"></ul>
                 </div>
