@@ -926,7 +926,7 @@
                     </p>
                     <p class="flex items-center gap-3">
                         <span class="material-symbols-outlined text-[20px] text-primary">mail</span>
-                        hcm@anhalongan.com
+                        <!-- hcm@anhalongan.com -->
                     </p>
                 </div>
             </div>
@@ -944,7 +944,7 @@
         <div id="product-modal-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
         <!-- Panel -->
         <div id="product-modal-panel"
-            class="relative bg-surface rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto custom-scrollbar flex flex-col md:flex-row">
+            class="relative bg-surface rounded-2xl shadow-2xl w-full max-w-5xl max-h-[90vh] flex flex-col md:flex-row overflow-hidden">
             <!-- Close button -->
             <button id="product-modal-close"
                 class="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high transition-colors"
@@ -952,12 +952,12 @@
                 <span class="material-symbols-outlined text-on-surface-variant">close</span>
             </button>
             <!-- Image -->
-            <div class="md:w-1/2 flex-shrink-0">
+            <div class="md:w-1/2 flex-shrink-0 md:max-h-[90vh] overflow-hidden">
                 <img id="modal-image" src="" alt=""
-                    class="w-full h-64 md:h-full object-cover rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none" />
+                    class="w-full h-56 md:h-full object-cover rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none" />
             </div>
             <!-- Content -->
-            <div class="p-8 flex flex-col justify-between flex-grow">
+            <div class="p-6 md:p-8 flex flex-col justify-between flex-grow overflow-y-auto custom-scrollbar">
                 <div>
                     <div class="flex flex-wrap items-center gap-3 mb-4">
                         <span id="modal-badge"
@@ -967,7 +967,8 @@
                     </div>
                     <h3 id="modal-title" class="font-headline-lg text-headline-lg-mobile text-primary mb-4"></h3>
                     <p id="modal-description"
-                        class="text-body-md font-body-md text-on-surface-variant leading-relaxed mb-6"></p>
+                        class="text-body-sm font-body-md text-on-surface-variant leading-relaxed mb-5 text-[0.875rem]">
+                    </p>
                     <!-- Detail features -->
                     <ul id="modal-features" class="space-y-3 mb-8"></ul>
                 </div>
