@@ -132,6 +132,33 @@
         .industrial-mask {
             clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
         }
+
+        /* Product Detail Modal */
+        #product-modal {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        #product-modal.open {
+            opacity: 1;
+            pointer-events: all;
+        }
+        #product-modal-panel {
+            transform: translateY(32px) scale(0.97);
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+        #product-modal.open #product-modal-panel {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+        .product-card {
+            cursor: pointer;
+        }
+        .product-card:focus-visible {
+            outline: 2px solid #00478d;
+            outline-offset: 2px;
+        }
     </style>
 </head>
 
@@ -304,7 +331,9 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
                             <!-- Hộp Giấy Kraft -->
                             <div id="product-kraft"
-                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                                tabindex="0" role="button" aria-label="Xem chi tiết: Hộp Giấy Kraft"
+                                data-product="hop-kraft">
                                 <img alt="Hộp Giấy Kraft" class="w-full h-64 object-cover rounded-t-xl"
                                     src="images/image14.png" />
                                 <div class="p-6 flex-grow">
@@ -322,13 +351,15 @@
                                         <span class="font-label-sm text-label-sm text-secondary opacity-60">3-PLY
                                             KRAFT</span>
                                         <span
-                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                            class="material-symbols-outlined text-primary hover:translate-x-1 transition-transform">arrow_forward</span>
                                     </div>
                                 </div>
                             </div>
                             <!-- Hộp giấy carton nắp gài hông (Hộp COD) -->
                             <div
-                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                                tabindex="0" role="button" aria-label="Xem chi tiết: Hộp nắp gài hông"
+                                data-product="hop-nap-gai-hong">
                                 <img alt="Hộp giấy carton nắp gài hông (Hộp COD)"
                                     class="w-full h-64 object-cover rounded-t-xl" src="images/image13.png" />
                                 <div class="p-6 flex-grow">
@@ -346,13 +377,15 @@
                                         <span class="font-label-sm text-label-sm text-secondary opacity-60">3-PLY
                                             KRAFT</span>
                                         <span
-                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                            class="material-symbols-outlined text-primary hover:translate-x-1 transition-transform">arrow_forward</span>
                                     </div>
                                 </div>
                             </div>
                             <!-- Hộp giấy carton nắp gài cao cấp (Hộp quà tặng/hộp COD thương hiệu) -->
                             <div
-                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                                tabindex="0" role="button" aria-label="Xem chi tiết: Hộp quà tặng"
+                                data-product="hop-qua-tang">
                                 <img alt="Hộp quà tặng" class="w-full h-64 object-cover rounded-t-xl"
                                     src="images/image19.png" />
                                 <div class="p-6 flex-grow">
@@ -370,13 +403,15 @@
                                         <span class="font-label-sm text-label-sm text-secondary opacity-60">3-PLY
                                             KRAFT</span>
                                         <span
-                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                            class="material-symbols-outlined text-primary hover:translate-x-1 transition-transform">arrow_forward</span>
                                     </div>
                                 </div>
                             </div>
                             <!-- Bao bì Thực phẩm -->
                             <div id="product-food"
-                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                                tabindex="0" role="button" aria-label="Xem chi tiết: Bao Bì Thực Phẩm"
+                                data-product="bao-bi-thuc-pham">
                                 <img alt="Bao bì Thực phẩm" class="w-full h-64 object-cover rounded-t-xl"
                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo7b-OTB0AZzDCI37rQiuupT4in9EbdmL_dTQH0W3ST_WNlHlP4mEgtFYdITTSxaFq7Ra2K_EvyJMk36FTD4Twjy178JPL9Oei-xmJ_Rg1gAVXwa_uDDL2n0CSTpx9HZDiAI7Sn0Cb3vqjVdXD5ippO4KvHNDC9MlBPU49mPlObGBjk8sY7CYaw6xQ1c1Bz3FQmtOY6ezng1ptRIXKjk_uMoBQNgv6uAlB8YyGQxqDPI_V1H1jDdtTiZ1FLYzvjz-ppAXjXuYGTDby" />
                                 <div class="p-6 flex-grow">
@@ -395,13 +430,15 @@
                                         <span class="font-label-sm text-label-sm text-secondary opacity-60">PE
                                             COATED</span>
                                         <span
-                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                            class="material-symbols-outlined text-primary hover:translate-x-1 transition-transform">arrow_forward</span>
                                     </div>
                                 </div>
                             </div>
                             <!-- Bao bì Điện tử -->
                             <div
-                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                                tabindex="0" role="button" aria-label="Xem chi tiết: Bao Bì Điện Tử"
+                                data-product="bao-bi-dien-tu">
                                 <img alt="Bao bì Điện tử" class="w-full h-64 object-cover rounded-t-xl"
                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMv1reKdYt9_y-XGvyChM1Z-mOr8Vm6buaBFAdgbR76844BMMFPtiEWhRLfUjRhnazbhjO5KJn20JqXQWGRP2NYY_hpWABf1CrEukK-hnN67UFaPy7VwKRaJm_XENTCf11W3loAn_UUahFnPP5tcDTZAzWyrlf2JdcFXVf8joGbuK3wWoYjNWnC3kxrI3H23eX5f_iyBK7IO5-XZ4kKg6FSX6YSE7QHEsXKNH8gwvBDgBr_4QK7ic15LiGY84mZYniY12K-5LCrkx1" />
                                 <div class="p-6 flex-grow">
@@ -417,13 +454,15 @@
                                         <span class="font-label-sm text-label-sm text-secondary opacity-60">E-FLUTE
                                             BOARD</span>
                                         <span
-                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                            class="material-symbols-outlined text-primary hover:translate-x-1 transition-transform">arrow_forward</span>
                                     </div>
                                 </div>
                             </div>
                             <!-- Bao bì Nông sản -->
                             <div
-                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                                tabindex="0" role="button" aria-label="Xem chi tiết: Bao Bì Nông Sản"
+                                data-product="bao-bi-nong-san">
                                 <img alt="Bao bì Nông sản" class="w-full h-64 object-cover rounded-t-xl"
                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMHsdV29lJEyk1NwvCOIfvDSSH8zKRvtOrCbrSdJPIrXZaRdR2ci3_l0v9YIyEZLOA5_vLsn3M_cQSk0KflOiWzBgsZ-iq9N5b2cd50iUVEql4Rt42igj70vrmeuzgSm-qGRldQQPK6GuIIK7fOpL6FntZcWjaNZPX-L5mnpFruPxFaAyRfBOwURr5mJsQPPh41nQhjWthudRHjA-2XQXYn1YgvuqBKAFJCFdurSZ0hr7fz-ZntrfOiHYhAbu9D9hCSTY-7ZoFnye-" />
                                 <div class="p-6 flex-grow">
@@ -440,7 +479,7 @@
                                         <span class="font-label-sm text-label-sm text-secondary opacity-60">WINDOW
                                             BOX</span>
                                         <span
-                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                            class="material-symbols-outlined text-primary hover:translate-x-1 transition-transform">arrow_forward</span>
                                     </div>
                                 </div>
                             </div>
@@ -453,7 +492,9 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
                             <!-- Túi Giấy Quà Tặng -->
                             <div id="product-bags"
-                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                                tabindex="0" role="button" aria-label="Xem chi tiết: Túi Giấy Quà Tặng"
+                                data-product="tui-giay-qua-tang">
                                 <img alt="Túi Giấy Quà Tặng" class="w-full h-64 object-cover rounded-t-xl"
                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBvlQsEuUU2qxRmZdXbyKwOJTztuLTP-3x0MQ-q9Cbj2PZ8fwcBvm9B96x9xwdal94sCuRwprwdGPKDw1gAQCpDJMQtMoDubYAuzbDhTKlEoBzIM1mRrov6k8gTHYebSHe3oWotfDoXd-yLSQF9LiWKSb9vVYNQCvl1cAECe_k378pcs3jsB7l1xpyHnQt82sA9X59ujXXgHBXrf75KAFflwPbRGU6oFy83iqFH2Od8TQgZBmxFZDGo7Tu-242mhcPzFo0dXlcp_dM" />
                                 <div class="p-6 flex-grow">
@@ -469,13 +510,15 @@
                                         <span class="font-label-sm text-label-sm text-secondary opacity-60">IVORY
                                             MATT</span>
                                         <span
-                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                            class="material-symbols-outlined text-primary hover:translate-x-1 transition-transform">arrow_forward</span>
                                     </div>
                                 </div>
                             </div>
                             <!-- Túi mua sắm -->
                             <div
-                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                                tabindex="0" role="button" aria-label="Xem chi tiết: Túi mua sắm"
+                                data-product="tui-mua-sam">
                                 <img alt="Túi mua sắm" class="w-full h-64 object-cover rounded-t-xl"
                                     src="images/image20.png" />
                                 <div class="p-6 flex-grow">
@@ -492,13 +535,15 @@
                                         <span class="font-label-sm text-label-sm text-secondary opacity-60">KRAFT BROWN
                                         </span>
                                         <span
-                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                            class="material-symbols-outlined text-primary hover:translate-x-1 transition-transform">arrow_forward</span>
                                     </div>
                                 </div>
                             </div>
                             <!-- Túi giấy quà tặng cao cấp -->
                             <div
-                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                                tabindex="0" role="button" aria-label="Xem chi tiết: Túi giấy quà tặng cao cấp"
+                                data-product="tui-giay-cao-cap">
                                 <img alt="Túi giấy quà tặng cao cấp" class="w-full h-64 object-cover rounded-t-xl"
                                     src="images/image12.png" />
                                 <div class="p-6 flex-grow">
@@ -516,13 +561,15 @@
                                         <span class="font-label-sm text-label-sm text-secondary opacity-60">IVORY
                                         </span>
                                         <span
-                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                            class="material-symbols-outlined text-primary hover:translate-x-1 transition-transform">arrow_forward</span>
                                     </div>
                                 </div>
                             </div>
                             <!-- Túi giấy đựng bánh mì -->
                             <div
-                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                                tabindex="0" role="button" aria-label="Xem chi tiết: Túi giấy đựng bánh mì"
+                                data-product="tui-giay-banh-mi">
                                 <img alt="Túi giấy đựng bánh mì" class="w-full h-64 object-cover rounded-t-xl"
                                     src="images/image11.png" />
                                 <div class="p-6 flex-grow">
@@ -541,13 +588,15 @@
                                         <span class="font-label-sm text-label-sm text-secondary opacity-60">IVORY
                                         </span>
                                         <span
-                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                            class="material-symbols-outlined text-primary hover:translate-x-1 transition-transform">arrow_forward</span>
                                     </div>
                                 </div>
                             </div>
                             <!-- Bao bì Mỹ phẩm -->
                             <div
-                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                                tabindex="0" role="button" aria-label="Xem chi tiết: Bao Bì Mỹ Phẩm"
+                                data-product="bao-bi-my-pham">
                                 <img alt="Bao bì Mỹ phẩm" class="w-full h-64 object-cover rounded-t-xl"
                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3jxPnMQHos3lZhWEITNcnaVSvfIwQKMmasGbNPgqfJQ9QKiCflLbBdpwfQyps63rU8qRIW0U9JdthdL7b32n5QcLqEHU8IBQ4vsfVLppdrsvYMcT6eMggh3XTus7KaCHleFPHg-Jda5R72x4DEVdDkdAPJhbhf9zclgu_V2TN5hBG23agcHmlSuZOiDP2HXrQ38vf62Z8rP85dSCDjEH_DaV5xu1aVFfbfO3q9gQmU6LTCZApdQrslFxIskOApb8LUMh6gpAj2dSu" />
                                 <div class="p-6 flex-grow">
@@ -564,13 +613,15 @@
                                         <span class="font-label-sm text-label-sm text-secondary opacity-60">IVORY
                                             350GSM</span>
                                         <span
-                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                            class="material-symbols-outlined text-primary hover:translate-x-1 transition-transform">arrow_forward</span>
                                     </div>
                                 </div>
                             </div>
                             <!-- Bao bì Y tế -->
                             <div
-                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                                tabindex="0" role="button" aria-label="Xem chi tiết: Bao Bì Y Tế"
+                                data-product="bao-bi-y-te">
                                 <img alt="Bao bì Y tế" class="w-full h-64 object-cover rounded-t-xl"
                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhSDHCPpDxry6pAIeMyFp_S2aSda66og4HmujkATWBFMrX_Nr2-0PlchqBarFOcPxZpNZb9jtcg7VqZj-0OloWtW9l5Qqv8rsr4XFefpADeXaGuKXC8rs1HLlM8XoakwQCSbs43m8owh721fmYh1BCZyrom-tF9hWk5p8jp1McwE2S6pJAklGK9mfFHTTxaK5Yg-q5qPEAVwCGJyc2zISapDpceoSh91osRXeV1db-3JBhcJy4zb-MuES1WQiH_cz7op66CQ4r4hJw" />
                                 <div class="p-6 flex-grow">
@@ -586,7 +637,7 @@
                                         <span
                                             class="font-label-sm text-label-sm text-secondary opacity-60">DUPLEX/IVORY</span>
                                         <span
-                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                            class="material-symbols-outlined text-primary hover:translate-x-1 transition-transform">arrow_forward</span>
                                     </div>
                                 </div>
                             </div>
@@ -599,7 +650,9 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
                             <!-- Tem Nhãn Decal -->
                             <div id="product-labels"
-                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                                tabindex="0" role="button" aria-label="Xem chi tiết: Tem Nhãn Decal"
+                                data-product="tem-nhan-decal">
                                 <img alt="Tem Nhãn Decal" class="w-full h-64 object-cover rounded-t-xl"
                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlU3Q092oIFJjPG6C_EBm54UfmmWly9Eb0V6dK10KkGY4RbkbBdJ7LMtq-9UcA1DiDzlRfq9Bt5FmvZJESJvXcplmS9W2669a_Ui0x1YqQG7x0Zwlliu2-CQshLW3z6ATNmoRCUnsIMksMm5hdVerUBuJG__RspjkaVzKo0hb6Q5mq4QS4cxigP6AcMYx6yjZJ1vT2rd89rPHeZ6KwyIDhXZKxkTOLfmJF0-kJrTNmQvEcAGjFqzfODVN7GsnGpvVnmilzNicUK_WH" />
                                 <div class="p-6 flex-grow">
@@ -616,13 +669,15 @@
                                         <span class="font-label-sm text-label-sm text-secondary opacity-60">PVC
                                             WATERPROOF</span>
                                         <span
-                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                            class="material-symbols-outlined text-primary hover:translate-x-1 transition-transform">arrow_forward</span>
                                     </div>
                                 </div>
                             </div>
                             <!-- Thẻ treo nông sản -->
                             <div
-                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                                tabindex="0" role="button" aria-label="Xem chi tiết: Thẻ treo nông sản"
+                                data-product="the-treo-nong-san">
                                 <img alt="Thẻ treo nông sản" class="w-full h-64 object-cover rounded-t-xl"
                                     src="images/image16.png" />
                                 <div class="p-6 flex-grow">
@@ -640,13 +695,15 @@
                                         <span class="font-label-sm text-label-sm text-secondary opacity-60">AGRICULTURE
                                             TAGS</span>
                                         <span
-                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                            class="material-symbols-outlined text-primary hover:translate-x-1 transition-transform">arrow_forward</span>
                                     </div>
                                 </div>
                             </div>
                             <!-- Tem dán thức ăn gia súc -->
                             <div
-                                class="bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col">
+                                class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
+                                tabindex="0" role="button" aria-label="Xem chi tiết: Tem dán thức ăn gia súc"
+                                data-product="tem-thuc-an-gia-suc">
                                 <img alt="Tem dán thức ăn gia súc" class="w-full h-64 object-cover rounded-t-xl"
                                     src="images/image15.png" />
                                 <div class="p-6 flex-grow">
@@ -663,7 +720,7 @@
                                         <span class="font-label-sm text-label-sm text-secondary opacity-60">PVC
                                             WATERPROOF</span>
                                         <span
-                                            class="material-symbols-outlined text-primary cursor-pointer hover:translate-x-1 transition-transform">arrow_forward</span>
+                                            class="material-symbols-outlined text-primary hover:translate-x-1 transition-transform">arrow_forward</span>
                                     </div>
                                 </div>
                             </div>
@@ -874,6 +931,49 @@
             </p>
         </div>
     </footer>
+    <!-- Product Detail Modal -->
+    <div id="product-modal"
+        class="fixed inset-0 z-[200] flex items-center justify-center p-4 md:p-8"
+        role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <!-- Backdrop -->
+        <div id="product-modal-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+        <!-- Panel -->
+        <div id="product-modal-panel"
+            class="relative bg-surface rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto custom-scrollbar flex flex-col md:flex-row">
+            <!-- Close button -->
+            <button id="product-modal-close"
+                class="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high transition-colors"
+                aria-label="Đóng">
+                <span class="material-symbols-outlined text-on-surface-variant">close</span>
+            </button>
+            <!-- Image -->
+            <div class="md:w-1/2 flex-shrink-0">
+                <img id="modal-image" src="" alt=""
+                    class="w-full h-64 md:h-full object-cover rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none" />
+            </div>
+            <!-- Content -->
+            <div class="p-8 flex flex-col justify-between flex-grow">
+                <div>
+                    <div class="flex flex-wrap items-center gap-3 mb-4">
+                        <span id="modal-badge"
+                            class="bg-primary-fixed text-primary-fixed-variant px-3 py-1 font-label-sm text-[10px] rounded uppercase"></span>
+                        <span id="modal-spec"
+                            class="font-label-sm text-label-sm text-secondary opacity-60 uppercase tracking-wider"></span>
+                    </div>
+                    <h3 id="modal-title" class="font-headline-lg text-headline-lg-mobile text-primary mb-4"></h3>
+                    <p id="modal-description" class="text-body-md font-body-md text-on-surface-variant leading-relaxed mb-6"></p>
+                    <!-- Detail features -->
+                    <ul id="modal-features" class="space-y-3 mb-8"></ul>
+                </div>
+                <a href="https://zalo.me/0918176153" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-lg font-title-md text-body-md font-bold hover:brightness-110 transition-all">
+                    <span class="material-symbols-outlined text-[20px]">chat</span>
+                    Liên hệ tư vấn ngay
+                </a>
+            </div>
+        </div>
+    </div>
+
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -936,6 +1036,263 @@
 
         // Initialize active state on load
         updateActiveNavLink();
+
+        // ============================================================
+        // Product Detail Modal
+        // ============================================================
+        const PRODUCT_DATA = {
+            'hop-kraft': {
+                title: 'Hộp Giấy Kraft',
+                badge: 'Eco-friendly',
+                spec: '3-PLY KRAFT',
+                image: 'images/image14.png',
+                description: 'Hộp Giấy Kraft là giải pháp đóng gói tối ưu cho vận chuyển COD và thương mại điện tử. Cấu tạo từ carton 3 lớp nắp gài với lớp Kraft 2 mặt ôm lõi sóng giúp hộp cứng cáp, chịu lực tốt và bảo vệ hàng hóa trong suốt hành trình vận chuyển. Phong cách tối giản, cổ điển phù hợp với nhiều ngành hàng.',
+                features: [
+                    { icon: 'layers', text: 'Carton 3 lớp – cứng cáp, chịu lực tốt' },
+                    { icon: 'eco', text: 'Giấy Kraft tái chế thân thiện môi trường' },
+                    { icon: 'local_shipping', text: 'Form đứng, tối ưu cho vận chuyển COD' },
+                    { icon: 'straighten', text: 'Đa dạng kích thước theo yêu cầu' },
+                ]
+            },
+            'hop-nap-gai-hong': {
+                title: 'Hộp Nắp Gài Hông',
+                badge: 'Eco-friendly',
+                spec: '3-PLY KRAFT',
+                image: 'images/image13.png',
+                description: 'Hộp nắp gài hông có thiết kế đặc biệt với thành hộp dày gấp đôi so với hộp thông thường nhờ cấu trúc nắp gài hông độc đáo. Điều này giúp hộp chống cấn móp cực kỳ tốt, bảo vệ hàng hóa dễ vỡ hoặc giá trị cao. Form hộp dẹt thanh lịch, phù hợp cho các sản phẩm thời trang, đồ gia dụng hay đơn hàng COD cao cấp.',
+                features: [
+                    { icon: 'shield', text: 'Thành hộp dày gấp đôi – chống cấn móp tối ưu' },
+                    { icon: 'category', text: 'Form hộp dẹt thanh lịch, dễ chồng xếp' },
+                    { icon: 'eco', text: 'Giấy Kraft tái chế thân thiện môi trường' },
+                    { icon: 'local_shipping', text: 'Phù hợp hàng hóa dễ vỡ, giá trị cao' },
+                ]
+            },
+            'hop-qua-tang': {
+                title: 'Hộp Quà Tặng',
+                badge: 'Eco-friendly',
+                spec: '3-PLY KRAFT',
+                image: 'images/image19.png',
+                description: 'Hộp quà tặng cao cấp được sản xuất từ carton 3 lớp nắp gài bồi giấy mỹ thuật, tạo nên bề mặt mịn màng, sang trọng. Phía trong có lót giấy nến vàng nhạt để bọc bảo vệ sản phẩm và tăng thêm giá trị thẩm mỹ khi mở hộp. Phù hợp cho sản phẩm thời trang cao cấp, mỹ phẩm xa xỉ, hoặc làm hộp quà doanh nghiệp.',
+                features: [
+                    { icon: 'star', text: 'Bồi giấy mỹ thuật cao cấp, bề mặt sang trọng' },
+                    { icon: 'brightness_1', text: 'Lót giấy nến vàng nhạt bên trong' },
+                    { icon: 'diamond', text: 'Phù hợp thời trang, mỹ phẩm cao cấp' },
+                    { icon: 'brush', text: 'Tùy chỉnh thiết kế in ấn theo yêu cầu' },
+                ]
+            },
+            'bao-bi-thuc-pham': {
+                title: 'Bao Bì Thực Phẩm',
+                badge: 'Food Grade',
+                spec: 'PE COATED',
+                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCo7b-OTB0AZzDCI37rQiuupT4in9EbdmL_dTQH0W3ST_WNlHlP4mEgtFYdITTSxaFq7Ra2K_EvyJMk36FTD4Twjy178JPL9Oei-xmJ_Rg1gAVXwa_uDDL2n0CSTpx9HZDiAI7Sn0Cb3vqjVdXD5ippO4KvHNDC9MlBPU49mPlObGBjk8sY7CYaw6xQ1c1Bz3FQmtOY6ezng1ptRIXKjk_uMoBQNgv6uAlB8YyGQxqDPI_V1H1jDdtTiZ1FLYzvjz-ppAXjXuYGTDby',
+                description: 'Bao bì thực phẩm được sản xuất từ giấy Ivory/Duplex 300-350gsm, phủ màng PE (polyethylene) chuyên dụng cả hai mặt. Màng PE tạo ra rào cản hiệu quả chống thấm dầu mỡ, chống thấm nước và giữ nhiệt tốt. Chuyên dụng cho thực phẩm đông lạnh, hải sản, sản phẩm tươi sống và các sản phẩm cần bảo quản lạnh.',
+                features: [
+                    { icon: 'water_drop', text: 'Phủ màng PE chống thấm dầu mỡ và nước' },
+                    { icon: 'ac_unit', text: 'Chuyên dụng cho thực phẩm đông lạnh' },
+                    { icon: 'verified', text: 'Đạt tiêu chuẩn an toàn thực phẩm' },
+                    { icon: 'thermostat', text: 'Giữ nhiệt và bảo quản sản phẩm hiệu quả' },
+                ]
+            },
+            'bao-bi-dien-tu': {
+                title: 'Bao Bì Điện Tử',
+                badge: 'Industrial',
+                spec: 'E-FLUTE BOARD',
+                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBMv1reKdYt9_y-XGvyChM1Z-mOr8Vm6buaBFAdgbR76844BMMFPtiEWhRLfUjRhnazbhjO5KJn20JqXQWGRP2NYY_hpWABf1CrEukK-hnN67UFaPy7VwKRaJm_XENTCf11W3loAn_UUahFnPP5tcDTZAzWyrlf2JdcFXVf8joGbuK3wWoYjNWnC3kxrI3H23eX5f_iyBK7IO5-XZ4kKg6FSX6YSE7QHEsXKNH8gwvBDgBr_4QK7ic15LiGY84mZYniY12K-5LCrkx1',
+                description: 'Bao bì điện tử sử dụng lớp carton bồi sóng E (E-flute) kết hợp cán màng bóng cao cấp, chống ẩm hiệu quả. Cấu trúc sóng E mịn hơn sóng thông thường giúp bề mặt in ấn sắc nét hơn trong khi vẫn đảm bảo độ cứng và khả năng chịu lực. Phù hợp cho điện thoại, máy tính bảng, thiết bị điện tử nhỏ.',
+                features: [
+                    { icon: 'vibration', text: 'Sóng E chống rung lắc, bảo vệ thiết bị' },
+                    { icon: 'water_drop', text: 'Cán màng bóng chống ẩm, chống trầy' },
+                    { icon: 'print', text: 'Bề mặt in ấn sắc nét, màu sắc chính xác' },
+                    { icon: 'straighten', text: 'Tùy chỉnh kích thước và cấu trúc lồng' },
+                ]
+            },
+            'bao-bi-nong-san': {
+                title: 'Bao Bì Nông Sản',
+                badge: 'Export',
+                spec: 'WINDOW BOX',
+                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAMHsdV29lJEyk1NwvCOIfvDSSH8zKRvtOrCbrSdJPIrXZaRdR2ci3_l0v9YIyEZLOA5_vLsn3M_cQSk0KflOiWzBgsZ-iq9N5b2cd50iUVEql4Rt42igj70vrmeuzgSm-qGRldQQPK6GuIIK7fOpL6FntZcWjaNZPX-L5mnpFruPxFaAyRfBOwURr5mJsQPPh41nQhjWthudRHjA-2XQXYn1YgvuqBKAFJCFdurSZ0hr7fz-ZntrfOiHYhAbu9D9hCSTY-7ZoFnye-',
+                description: 'Bao bì nông sản xuất khẩu được sản xuất từ giấy Ivory bồi sóng E, cán màng chống thấm để bảo vệ nông sản trong môi trường lạnh và ẩm. Điểm nổi bật là thiết kế bế cửa sổ kiếng PVC trong suốt cao cấp, giúp người mua nhìn thấy trực tiếp sản phẩm bên trong, tạo cảm giác tin tưởng và tăng tính cạnh tranh khi xuất khẩu.',
+                features: [
+                    { icon: 'window', text: 'Cửa sổ kiếng PVC trong suốt cao cấp' },
+                    { icon: 'water_drop', text: 'Cán màng chống thấm, chịu môi trường lạnh' },
+                    { icon: 'public', text: 'Đáp ứng tiêu chuẩn xuất khẩu quốc tế' },
+                    { icon: 'eco', text: 'Bảo quản nông sản tươi lâu hơn' },
+                ]
+            },
+            'tui-giay-qua-tang': {
+                title: 'Túi Giấy Quà Tặng',
+                badge: 'Premium',
+                spec: 'IVORY MATT',
+                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCBvlQsEuUU2qxRmZdXbyKwOJTztuLTP-3x0MQ-q9Cbj2PZ8fwcBvm9B96x9xwdal94sCuRwprwdGPKDw1gAQCpDJMQtMoDubYAuzbDhTKlEoBzIM1mRrov6k8gTHYebSHe3oWotfDoXd-yLSQF9LiWKSb9vVYNQCvl1cAECe_k378pcs3jsB7l1xpyHnQt82sA9X59ujXXgHBXrf75KAFflwPbRGU6oFy83iqFH2Od8TQgZBmxFZDGo7Tu-242mhcPzFo0dXlcp_dM',
+                description: 'Túi giấy quà tặng cao cấp được sản xuất từ giấy Ivory hoặc Couche 250-300gsm, cán màng mờ sang trọng tạo cảm giác mịn màng khi chạm vào. Quai dây dù dệt tròn chắc chắn, in offset 4 màu sắc nét cho logo và thiết kế thương hiệu. Phù hợp cho các dịp lễ, quà tặng doanh nghiệp và các thương hiệu thời trang, mỹ phẩm.',
+                features: [
+                    { icon: 'texture', text: 'Cán màng mờ sang trọng, mịn màng' },
+                    { icon: 'link', text: 'Quai dây dù dệt tròn chắc chắn' },
+                    { icon: 'print', text: 'In offset 4 màu sắc nét' },
+                    { icon: 'card_giftcard', text: 'Phù hợp quà tặng doanh nghiệp, lễ hội' },
+                ]
+            },
+            'tui-mua-sam': {
+                title: 'Túi Mua Sắm',
+                badge: 'Premium',
+                spec: 'KRAFT BROWN',
+                image: 'images/image20.png',
+                description: 'Túi mua sắm được làm từ giấy Kraft nâu 250-300gsm với bề mặt có xơ giấy nhẹ đặc trưng, tạo cảm giác mộc mạc, gần gũi với thiên nhiên – rất phù hợp cho các thương hiệu hữu cơ và lifestyle. Quai dây xỏ thắt nút được đóng nút kim loại chắc chắn, chống rách dây. Phù hợp cho cửa hàng bán lẻ, thực phẩm hữu cơ, thủ công mỹ nghệ.',
+                features: [
+                    { icon: 'spa', text: 'Giấy Kraft mộc mạc, thân thiện môi trường' },
+                    { icon: 'link', text: 'Nút kim loại chống rách dây quai' },
+                    { icon: 'storefront', text: 'Phù hợp cửa hàng bán lẻ, hữu cơ' },
+                    { icon: 'brush', text: 'In logo, nhận diện thương hiệu sắc nét' },
+                ]
+            },
+            'tui-giay-cao-cap': {
+                title: 'Túi Giấy Quà Tặng Cao Cấp',
+                badge: 'Premium',
+                spec: 'IVORY',
+                image: 'images/image12.png',
+                description: 'Túi giấy quà tặng cao cấp sử dụng giấy Ivory hoặc Couche 250-300gsm, cán màng mờ cao cấp giúp chống thấm, chống trầy xước và tạo vẻ sang trọng tổng thể. Thiết kế tinh tế phù hợp cho các thương hiệu xa xỉ, mỹ phẩm cao cấp, trang sức và thời trang premium. Có thể kết hợp ép nhũ, dập nổi theo yêu cầu.',
+                features: [
+                    { icon: 'diamond', text: 'Cán màng mờ cao cấp – chống trầy, chống thấm' },
+                    { icon: 'auto_awesome', text: 'Hỗ trợ ép nhũ, dập nổi, cắt laser' },
+                    { icon: 'style', text: 'Phù hợp thương hiệu xa xỉ, premium' },
+                    { icon: 'straighten', text: 'Đa dạng kích thước, tùy chỉnh theo đơn' },
+                ]
+            },
+            'tui-giay-banh-mi': {
+                title: 'Túi Giấy Đựng Bánh Mì',
+                badge: 'Food Grade',
+                spec: 'KRAFT',
+                image: 'images/image11.png',
+                description: 'Túi giấy đựng bánh mì được làm từ giấy Kraft nâu hoặc trắng định lượng mỏng nhẹ, có khả năng thấm hút dầu mỡ nhẹ tự nhiên và chịu nhiệt tốt, phù hợp đựng bánh mì, bánh ngọt và các đồ ăn nóng. Thiết kế đơn giản, tiện lợi, có thể mở nắp dễ dàng. In ấn nhận diện thương hiệu trực tiếp lên túi.',
+                features: [
+                    { icon: 'local_fire_department', text: 'Chịu nhiệt tốt cho đồ ăn nóng' },
+                    { icon: 'opacity', text: 'Thấm hút dầu mỡ nhẹ tự nhiên' },
+                    { icon: 'fastfood', text: 'Phù hợp bánh mì, bánh ngọt, đồ ăn nhanh' },
+                    { icon: 'print', text: 'In logo, thương hiệu trực tiếp lên túi' },
+                ]
+            },
+            'bao-bi-my-pham': {
+                title: 'Bao Bì Mỹ Phẩm',
+                badge: 'Luxury',
+                spec: 'IVORY 350GSM',
+                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD3jxPnMQHos3lZhWEITNcnaVSvfIwQKMmasGbNPgqfJQ9QKiCflLbBdpwfQyps63rU8qRIW0U9JdthdL7b32n5QcLqEHU8IBQ4vsfVLppdrsvYMcT6eMggh3XTus7KaCHleFPHg-Jda5R72x4DEVdDkdAPJhbhf9zclgu_V2TN5hBG23agcHmlSuZOiDP2HXrQ38vf62Z8rP85dSCDjEH_DaV5xu1aVFfbfO3q9gQmU6LTCZApdQrslFxIskOApb8LUMh6gpAj2dSu',
+                description: 'Bao bì mỹ phẩm được sản xuất từ giấy Ivory cao cấp 300-350gsm, cán màng mờ mịn màng tạo cảm giác premium ngay từ lần chạm đầu tiên. In gradient màu mượt mà, sắc nét từng chi tiết nhỏ nhờ công nghệ in offset 4 màu + Pantone. Phù hợp cho serum, kem dưỡng, nước hoa và các sản phẩm mỹ phẩm cao cấp.',
+                features: [
+                    { icon: 'spa', text: 'Ivory 300-350gsm – chất lượng premium' },
+                    { icon: 'texture', text: 'Cán màng mờ mịn màng, cảm giác sang trọng' },
+                    { icon: 'palette', text: 'In gradient 4 màu + Pantone sắc nét' },
+                    { icon: 'auto_awesome', text: 'Hỗ trợ ép nhũ vàng/bạc, dập nổi' },
+                ]
+            },
+            'bao-bi-y-te': {
+                title: 'Bao Bì Y Tế',
+                badge: 'Medical',
+                spec: 'DUPLEX/IVORY',
+                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBhSDHCPpDxry6pAIeMyFp_S2aSda66og4HmujkATWBFMrX_Nr2-0PlchqBarFOcPxZpNZb9jtcg7VqZj-0OloWtW9l5Qqv8rsr4XFefpADeXaGuKXC8rs1HLlM8XoakwQCSbs43m8owh721fmYh1BCZyrom-tF9hWk5p8jp1McwE2S6pJAklGK9mfFHTTxaK5Yg-q5qPEAVwCGJyc2zISapDpceoSh91osRXeV1db-3JBhcJy4zb-MuES1WQiH_cz7op66CQ4r4hJw',
+                description: 'Bao bì y tế được sản xuất từ giấy Duplex hoặc Ivory 250-300gsm, cán màng mỏng chống bụi và ẩm nhẹ. Thiết kế có đường bế hờ răng cưa tiện lợi giúp người dùng mở hộp dễ dàng mà không cần dụng cụ. Phù hợp cho dược phẩm, thực phẩm chức năng, thiết bị y tế không cần vô trùng và các sản phẩm chăm sóc sức khỏe.',
+                features: [
+                    { icon: 'cut', text: 'Đường bế hờ răng cưa, mở hộp dễ dàng' },
+                    { icon: 'shield', text: 'Cán màng mỏng chống bụi và ẩm nhẹ' },
+                    { icon: 'medical_services', text: 'Phù hợp dược phẩm, thực phẩm chức năng' },
+                    { icon: 'print', text: 'In thông tin sản phẩm rõ ràng, chính xác' },
+                ]
+            },
+            'tem-nhan-decal': {
+                title: 'Tem Nhãn Decal',
+                badge: 'Diverse',
+                spec: 'PVC WATERPROOF',
+                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAlU3Q092oIFJjPG6C_EBm54UfmmWly9Eb0V6dK10KkGY4RbkbBdJ7LMtq-9UcA1DiDzlRfq9Bt5FmvZJESJvXcplmS9W2669a_Ui0x1YqQG7x0Zwlliu2-CQshLW3z6ATNmoRCUnsIMksMm5hdVerUBuJG__RspjkaVzKo0hb6Q5mq4QS4cxigP6AcMYx6yjZJ1vT2rd89rPHeZ6KwyIDhXZKxkTOLfmJF0-kJrTNmQvEcAGjFqzfODVN7GsnGpvVnmilzNicUK_WH',
+                description: 'Tem nhãn Decal nhựa PVC/PP đục được thiết kế đặc biệt để chịu đựng môi trường khắc nghiệt. Bề mặt cán màng bóng tạo độ sáng và bảo vệ lớp in bên dưới khỏi trầy xước và ẩm ướt. Keo dán chuyên dụng bám dính tốt ngay cả trên bề mặt ướt hoặc trong môi trường lạnh từ -18°C đến +60°C. Phù hợp cho thực phẩm đông lạnh, hải sản, đồ uống.',
+                features: [
+                    { icon: 'water_drop', text: 'Chống thấm nước hoàn toàn, kể cả khi ngâm' },
+                    { icon: 'ac_unit', text: 'Bám dính tốt từ -18°C đến +60°C' },
+                    { icon: 'layers', text: 'Cán màng bóng bảo vệ lớp in' },
+                    { icon: 'cut', text: 'Bế theo hình dạng tùy chỉnh' },
+                ]
+            },
+            'the-treo-nong-san': {
+                title: 'Thẻ Treo Nông Sản',
+                badge: 'Agri',
+                spec: 'AGRICULTURE TAGS',
+                image: 'images/image16.png',
+                description: 'Thẻ treo nông sản chuyên dụng thường dùng cho khoai lang, hành tây, tỏi, hoặc trái cây đóng túi lưới. Được định hình bo tròn góc và tạo đuôi gài chắc chắn, giúp thẻ bám cố định vào túi lưới mà không bị rơi trong quá trình vận chuyển. In đầy đủ thông tin truy xuất nguồn gốc, barcode, QR code và thông tin dinh dưỡng.',
+                features: [
+                    { icon: 'agriculture', text: 'Chuyên dụng cho nông sản đóng túi lưới' },
+                    { icon: 'push_pin', text: 'Đuôi gài chắc chắn, không rơi khi vận chuyển' },
+                    { icon: 'qr_code', text: 'In barcode, QR code truy xuất nguồn gốc' },
+                    { icon: 'format_shapes', text: 'Bo tròn góc, định hình theo yêu cầu' },
+                ]
+            },
+            'tem-thuc-an-gia-suc': {
+                title: 'Tem Dán Thức Ăn Gia Súc',
+                badge: 'Food',
+                spec: 'PVC WATERPROOF',
+                image: 'images/image15.png',
+                description: 'Tem dán thức ăn gia súc được sản xuất từ decal nhựa đục chuyên dụng, bề mặt dai và bền, xé không rách. Chống thấm nước hoàn toàn, phù hợp bảo quản trong điều kiện kho ẩm, ngoài trời hoặc môi trường nông nghiệp. Có thể cán màng bóng để tăng độ sáng hoặc cán màng mờ để tạo phong cách organic. Keo bền, bám chắc trên túi PE, PP, bao bì dệt.',
+                features: [
+                    { icon: 'pets', text: 'Chuyên dụng cho bao bì thức ăn chăn nuôi' },
+                    { icon: 'water_drop', text: 'Chống thấm nước, chịu môi trường kho ẩm' },
+                    { icon: 'layers', text: 'Bề mặt dai, bền – xé không rách' },
+                    { icon: 'texture', text: 'Tùy chọn cán bóng hoặc cán mờ' },
+                ]
+            },
+        };
+
+        const modal = document.getElementById('product-modal');
+        const modalImage = document.getElementById('modal-image');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBadge = document.getElementById('modal-badge');
+        const modalSpec = document.getElementById('modal-spec');
+        const modalDescription = document.getElementById('modal-description');
+        const modalFeatures = document.getElementById('modal-features');
+        const modalClose = document.getElementById('product-modal-close');
+        const modalBackdrop = document.getElementById('product-modal-backdrop');
+
+        function openModal(productKey) {
+            const data = PRODUCT_DATA[productKey];
+            if (!data) return;
+            modalImage.src = data.image;
+            modalImage.alt = data.title;
+            modalTitle.textContent = data.title;
+            modalBadge.textContent = data.badge;
+            modalSpec.textContent = data.spec;
+            modalDescription.textContent = data.description;
+            modalFeatures.innerHTML = data.features.map(f =>
+                `<li class="flex items-start gap-3 text-body-md text-on-surface-variant">
+                    <span class="material-symbols-outlined text-primary text-[20px] mt-0.5 flex-shrink-0">${f.icon}</span>
+                    <span>${f.text}</span>
+                </li>`
+            ).join('');
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            modalClose.focus();
+        }
+
+        function closeModal() {
+            modal.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        // Open on card click
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const key = card.getAttribute('data-product');
+                openModal(key);
+            });
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    const key = card.getAttribute('data-product');
+                    openModal(key);
+                }
+            });
+        });
+
+        modalClose.addEventListener('click', closeModal);
+        modalBackdrop.addEventListener('click', closeModal);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
     </script>
 </body>
 
