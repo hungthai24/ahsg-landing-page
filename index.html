@@ -133,6 +133,12 @@
             clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
         }
 
+        .homepage-thumb {
+            transform: translateZ(0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
         /* Product Detail Modal */
         #product-modal {
             opacity: 0;
@@ -341,7 +347,8 @@
                                 aria-label="Xem chi tiết: Hộp giấy đóng gói sản phẩm nông sản khô"
                                 data-product="hop-nong-san-kho">
                                 <img alt="Hộp giấy đóng gói sản phẩm nông sản khô"
-                                    class="w-full h-64 object-cover rounded-t-xl" src="images/image1.png" />
+                                    class="w-full h-64 object-cover rounded-t-xl homepage-thumb"
+                                    src="images/image1_thumb.jpg" />
                                 <div class="p-6 flex-grow">
                                     <div class="flex justify-between items-start mb-4">
                                         <h4 class="font-title-md text-title-md text-primary">Hộp giấy đóng gói nông sản
@@ -367,8 +374,9 @@
                                 class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Hộp giấy đựng thực phẩm đông lạnh"
                                 data-product="bao-bi-thuc-pham">
-                                <img alt="Hộp giấy thực phẩm đông lạnh" class="w-full h-64 object-cover rounded-t-xl"
-                                    src="images/image8.png" />
+                                <img alt="Hộp giấy thực phẩm đông lạnh"
+                                    class="w-full h-64 object-cover rounded-t-xl homepage-thumb"
+                                    src="images/image8_thumb.jpg" />
                                 <div class="p-6 flex-grow">
                                     <div class="flex justify-between items-start mb-4">
                                         <h4 class="font-title-md text-title-md text-primary">Hộp giấy thực phẩm
@@ -395,7 +403,7 @@
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Bao Bì Nông Sản"
                                 data-product="bao-bi-nong-san">
                                 <img alt="Bao bì Nông sản" class="w-full h-64 object-cover rounded-t-xl"
-                                    src="images/image9.png" />
+                                    src="images/image9_thumb.jpg" />
                                 <div class="p-6 flex-grow">
                                     <div class="flex justify-between items-start mb-4">
                                         <h4 class="font-title-md text-title-md text-primary">Bao Bì Nông Sản</h4>
@@ -420,7 +428,7 @@
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Hộp nắp gài hông"
                                 data-product="hop-nap-gai-hong">
                                 <img alt="Hộp giấy carton nắp gài hông (Hộp COD)"
-                                    class="w-full h-64 object-cover rounded-t-xl" src="images/image13.png" />
+                                    class="w-full h-64 object-cover rounded-t-xl" src="images/image13_thumb.jpg" />
                                 <div class="p-6 flex-grow">
                                     <div class="flex justify-between items-start mb-4">
                                         <h4 class="font-title-md text-title-md text-primary">Hộp nắp gài hông</h4>
@@ -440,38 +448,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Hộp giấy carton nắp gài cao cấp (Hộp quà tặng/hộp COD thương hiệu) -->
-                            <div class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
-                                tabindex="0" role="button" aria-label="Xem chi tiết: Hộp quà tặng"
-                                data-product="hop-qua-tang">
-                                <img alt="Hộp giấy carton nắp gài cao cấp" class="w-full h-64 object-cover rounded-t-xl"
-                                    src="images/image19.png" />
-                                <div class="p-6 flex-grow">
-                                    <div class="flex justify-between items-start mb-4">
-                                        <h4 class="font-title-md text-title-md text-primary">Hộp giấy carton nắp gài cao
-                                            cấp</h4>
-                                        <span
-                                            class="bg-primary-fixed text-primary-fixed-variant px-3 py-1 font-label-sm text-[10px] rounded uppercase">Eco-friendly</span>
-                                    </div>
-                                    <p class="text-body-md font-body-md text-on-surface-variant mb-6">Carton 3 lớp nắp
-                                        gài bồi giấy mỹ thuật. Phía trong có lót giấy nến vàng nhạt để bọc bảo vệ sản
-                                        phẩm. Dùng cho sản phẩm thời trang cao cấp hoặc mỹ phẩm xa xỉ.
-                                    </p>
-                                    <div
-                                        class="border-t border-outline-variant pt-4 flex justify-between items-center mt-auto">
-                                        <span class="font-label-sm text-label-sm text-secondary opacity-60">3-PLY
-                                            KRAFT</span>
-                                        <span
-                                            class="material-symbols-outlined text-primary hover:translate-x-1 transition-transform">arrow_forward</span>
-                                    </div>
-                                </div>
-                            </div>
                             <!-- Hộp giấy có quai treo -->
                             <div class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Hộp giấy có quai treo"
                                 data-product="bao-bi-dien-tu">
                                 <img alt="Hộp giấy có quai treo" class="w-full h-64 object-cover rounded-t-xl"
-                                    src="images/image3.png" />
+                                    src="images/image3_thumb.jpg" />
                                 <div class="p-6 flex-grow">
                                     <div class="flex justify-between items-start mb-4">
                                         <h4 class="font-title-md text-title-md text-primary">Hộp giấy có quai treo</h4>
@@ -490,26 +472,27 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Hộp giấy đựng Mỹ phẩm -->
+                            <!-- Hộp giấy carton nắp gài cao cấp (Hộp quà tặng/hộp COD thương hiệu) -->
                             <div class="product-card bg-surface rounded-xl border border-outline-variant hover:border-primary transition-all shadow-sm flex flex-col hover:shadow-lg"
-                                tabindex="0" role="button" aria-label="Xem chi tiết: Hộp giấy đựng Mỹ phẩm"
-                                data-product="hop-giay-my-pham">
-                                <img alt="Hộp giấy đựng Mỹ phẩm" class="w-full h-64 object-cover rounded-t-xl"
-                                    src="images/image7.png" />
+                                tabindex="0" role="button" aria-label="Xem chi tiết: Hộp quà tặng"
+                                data-product="hop-qua-tang">
+                                <img alt="Hộp giấy carton nắp gài cao cấp" class="w-full h-64 object-cover rounded-t-xl"
+                                    src="images/image19_thumb.jpg" />
                                 <div class="p-6 flex-grow">
                                     <div class="flex justify-between items-start mb-4">
-                                        <h4 class="font-title-md text-title-md text-primary">Hộp giấy đựng Mỹ phẩm
-                                        </h4>
+                                        <h4 class="font-title-md text-title-md text-primary">Hộp giấy carton nắp gài cao
+                                            cấp</h4>
                                         <span
-                                            class="bg-primary-fixed text-primary-fixed-variant px-3 py-1 font-label-sm text-[10px] rounded uppercase">Luxury</span>
+                                            class="bg-primary-fixed text-primary-fixed-variant px-3 py-1 font-label-sm text-[10px] rounded uppercase">Eco-friendly</span>
                                     </div>
-                                    <p class="text-body-md font-body-md text-on-surface-variant mb-6">Giấy Ivory
-                                        300-350gsm cao cấp, cán màng mờ mịn màng. In gradient mượt mà, sắc nét từng chi
-                                        tiết. Chuyên dụng làm vỏ hộp ngoài cho các dòng mỹ phẩm cao cấp.</p>
+                                    <p class="text-body-md font-body-md text-on-surface-variant mb-6">Carton 3 lớp nắp
+                                        gài bồi giấy mỹ thuật. Phía trong có lót giấy nến vàng nhạt để bọc bảo vệ sản
+                                        phẩm. Dùng cho sản phẩm thời trang cao cấp hoặc mỹ phẩm xa xỉ.
+                                    </p>
                                     <div
                                         class="border-t border-outline-variant pt-4 flex justify-between items-center mt-auto">
-                                        <span class="font-label-sm text-label-sm text-secondary opacity-60">IVORY
-                                            350GSM</span>
+                                        <span class="font-label-sm text-label-sm text-secondary opacity-60">3-PLY
+                                            KRAFT</span>
                                         <span
                                             class="material-symbols-outlined text-primary hover:translate-x-1 transition-transform">arrow_forward</span>
                                     </div>
@@ -546,7 +529,7 @@
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Hộp giấy đựng khẩu trang trẻ em"
                                 data-product="hop-giay-khau-trang-tre-em">
                                 <img alt="Hộp giấy đựng khẩu trang trẻ em" class="w-full h-64 object-cover rounded-t-xl"
-                                    src="images/image10.png" />
+                                    src="images/image10_thumb.jpg" />
                                 <div class="p-6 flex-grow">
                                     <div class="flex justify-between items-start mb-4">
                                         <h4 class="font-title-md text-title-md text-primary">Hộp giấy đựng khẩu trang
@@ -581,7 +564,7 @@
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Túi Giấy Quà Tặng"
                                 data-product="tui-giay-qua-tang">
                                 <img alt="Túi Giấy Quà Tặng" class="w-full h-64 object-cover rounded-t-xl"
-                                    src="images/image17.png" />
+                                    src="images/image17_thumb.jpg" />
                                 <div class="p-6 flex-grow">
                                     <div class="flex justify-between items-start mb-4">
                                         <h4 class="font-title-md text-title-md text-primary">Túi Giấy Quà Tặng</h4>
@@ -604,7 +587,7 @@
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Túi giấy đựng bánh mì"
                                 data-product="tui-giay-banh-mi">
                                 <img alt="Túi giấy đựng bánh mì" class="w-full h-64 object-cover rounded-t-xl"
-                                    src="images/image11.png" />
+                                    src="images/image11_thumb.jpg" />
                                 <div class="p-6 flex-grow">
                                     <div class="flex justify-between items-start mb-4">
                                         <h4 class="font-title-md text-title-md text-primary">Túi giấy đựng bánh mì
@@ -630,7 +613,7 @@
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Túi giấy quà tặng cao cấp"
                                 data-product="tui-giay-cao-cap">
                                 <img alt="Túi giấy quà tặng cao cấp" class="w-full h-64 object-cover rounded-t-xl"
-                                    src="images/image12.png" />
+                                    src="images/image12_thumb.jpg" />
                                 <div class="p-6 flex-grow">
                                     <div class="flex justify-between items-start mb-4">
                                         <h4 class="font-title-md text-title-md text-primary">Túi giấy quà tặng cao cấp
@@ -655,7 +638,7 @@
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Túi mua sắm"
                                 data-product="tui-mua-sam">
                                 <img alt="Túi mua sắm" class="w-full h-64 object-cover rounded-t-xl"
-                                    src="images/image20.png" />
+                                    src="images/image20_thumb.jpg" />
                                 <div class="p-6 flex-grow">
                                     <div class="flex justify-between items-start mb-4">
                                         <h4 class="font-title-md text-title-md text-primary">Túi mua sắm</h4>
@@ -687,7 +670,7 @@
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Tem Nhãn Decal"
                                 data-product="tem-nhan-decal">
                                 <img alt="Tem Nhãn Decal" class="w-full h-64 object-cover rounded-t-xl"
-                                    src="images/image2.png" />
+                                    src="images/image2_thumb.jpg" />
                                 <div class="p-6 flex-grow">
                                     <div class="flex justify-between items-start mb-4">
                                         <h4 class="font-title-md text-title-md text-primary">Tem Nhãn Decal</h4>
@@ -711,7 +694,7 @@
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Thẻ treo nông sản"
                                 data-product="the-treo-nong-san">
                                 <img alt="Thẻ treo nông sản" class="w-full h-64 object-cover rounded-t-xl"
-                                    src="images/image16.png" />
+                                    src="images/image16_thumb.jpg" />
                                 <div class="p-6 flex-grow">
                                     <div class="flex justify-between items-start mb-4">
                                         <h4 class="font-title-md text-title-md text-primary">Thẻ treo nông sản
@@ -736,7 +719,7 @@
                                 tabindex="0" role="button" aria-label="Xem chi tiết: Tem dán thức ăn gia súc"
                                 data-product="tem-thuc-an-gia-suc">
                                 <img alt="Tem dán thức ăn gia súc" class="w-full h-64 object-cover rounded-t-xl"
-                                    src="images/image15.png" />
+                                    src="images/image15_thumb.jpg" />
                                 <div class="p-6 flex-grow">
                                     <div class="flex justify-between items-start mb-4">
                                         <h4 class="font-title-md text-title-md text-primary">Tem dán thức ăn gia súc
@@ -920,22 +903,28 @@
             <div>
                 <h4 class="font-label-sm text-label-sm text-surface-bright mb-6 uppercase tracking-widest">Sản phẩm</h4>
                 <ul class="space-y-4 font-body-md text-outline-variant">
-                    <li><a class="hover:text-surface-bright transition-colors" href="#product-hop-giay">Hộp Giấy Nông Sản Khô</a></li>
-                    <li><a class="hover:text-surface-bright transition-colors" href="#product-bags">Túi Giấy Quà Tặng</a></li>
-                    <li><a class="hover:text-surface-bright transition-colors" href="#product-labels">Tem Nhãn Decal</a></li>
-                    <li><a class="hover:text-surface-bright transition-colors" href="#product-food">Bao Bì Thực Phẩm</a></li>
+                    <li><a class="hover:text-surface-bright transition-colors" href="#product-hop-giay">Hộp Giấy Nông
+                            Sản Khô</a></li>
+                    <li><a class="hover:text-surface-bright transition-colors" href="#product-bags">Túi Giấy Quà
+                            Tặng</a></li>
+                    <li><a class="hover:text-surface-bright transition-colors" href="#product-labels">Tem Nhãn Decal</a>
+                    </li>
+                    <li><a class="hover:text-surface-bright transition-colors" href="#product-food">Bao Bì Thực Phẩm</a>
+                    </li>
                 </ul>
             </div>
             <div>
                 <h4 class="font-label-sm text-label-sm text-surface-bright mb-6 uppercase tracking-widest">Liên kết</h4>
                 <ul class="space-y-4 font-body-md text-outline-variant">
                     <li><a class="hover:text-surface-bright transition-colors" href="#about">Về chúng tôi</a></li>
-                    <li><a class="hover:text-surface-bright transition-colors" href="#process">Quy trình sản xuất</a></li>
+                    <li><a class="hover:text-surface-bright transition-colors" href="#process">Quy trình sản xuất</a>
+                    </li>
                     <li><a class="hover:text-surface-bright transition-colors" href="https://anhalongan.com"
                             target="_blank">Công ty bao bì
                             An Hạ
                             Long An</a></li>
-                    <li><a class="hover:text-surface-bright transition-colors" href="https://ahtn.vn" target="_blank">Công ty
+                    <li><a class="hover:text-surface-bright transition-colors" href="https://ahtn.vn"
+                            target="_blank">Công ty
                             bao bì An Hạ Tây
                             Ninh</a></li>
                 </ul>
@@ -983,9 +972,9 @@
                 <span class="material-symbols-outlined text-on-surface-variant">close</span>
             </button>
             <!-- Image -->
-            <div class="md:w-1/2 flex-shrink-0 md:max-h-[90vh] overflow-hidden">
+            <div class="md:w-[60%] flex-shrink-0 md:max-h-[90vh] overflow-hidden">
                 <img id="modal-image" src="" alt=""
-                    class="w-full h-56 md:h-full object-cover rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none" />
+                    class="w-full h-56 md:h-full object-cover rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none aspect-square" />
             </div>
             <!-- Content -->
             <div class="p-6 md:p-8 flex flex-col justify-between flex-grow overflow-y-auto custom-scrollbar">
